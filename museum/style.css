@@ -1,103 +1,177 @@
 @font-face {
-    font-family: Forum;
-    src: url("assets/fonts/Forum.ttf");
+  font-family: Forum;
+  src: url("assets/fonts/Forum.ttf");
 }
 
 @font-face {
-    font-family: Roboto;
-    src: url("assets/fonts/Roboto-Thin.ttf");
-    font-weight: 100;
+  font-family: Roboto;
+  src: url("assets/fonts/Roboto-Thin.ttf");
+  font-weight: 100;
 }
 
 @font-face {
-    font-family: Roboto;
-    src: url("assets/fonts/Roboto-Light.ttf");
-    font-weight: 300;
+  font-family: Roboto;
+  src: url("assets/fonts/Roboto-Light.ttf");
+  font-weight: 300;
 }
 
 @font-face {
-    font-family: Roboto;
-    src: url("assets/fonts/Roboto-Regular.ttf");
-    font-weight: 500;
+  font-family: Roboto;
+  src: url("assets/fonts/Roboto-Regular.ttf");
+  font-weight: 500;
 }
 
 @font-face {
-    font-family: Roboto;
-    src: url("assets/fonts/Roboto-Bold.ttf");
-    font-weight: 700;
+  font-family: Roboto;
+  src: url("assets/fonts/Roboto-Bold.ttf");
+  font-weight: 700;
 }
-
 
 :root {
-    --bg-dark: #030303;
-    --dark-red: #710707;
-    --font-gold: #9d8665;
-    --font-h2: 80px;
-    --font2: 32px;
+  --bg-dark: #030303;
+  --dark-red: #710707;
+  --font-gold: #9d8665;
+  --white: #ffffff;
+  --black: #000000;
+  --font-h2: 80px;
+  --font2: 32px;
 }
 html {
-    scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 .section {
-    padding: 0 75px;
+  padding: 0 75px;
 }
 
 .dark-section {
-    background-color: var(--bg-dark);
+  background-color: var(--bg-dark);
 }
 
 .video-section {
-    padding-top: 95px;
+  padding-top: 95px;
 }
 
 .container {
-    margin: 0 auto;
-    max-width: 1440px;
+  margin: 0 auto;
+  max-width: 1440px;
+  height: 842px;
 }
+
 .header {
-    background-color: var(--bg-dark);
+  background-color: var(--bg-dark);
 }
+
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-logo {
-    padding-left: 51px;
-    font-family: Forum;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 28px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    background-image: url("assets/svg/logo.svg");
-    background-size: 26px;
-    background-position: left;
-    background-repeat: no-repeat;
+  padding-left: 51px;
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: var(--white);
+  background-image: url("assets/svg/logo.svg");
+  background-size: 26px;
+  background-position: left;
+  background-repeat: no-repeat;
 }
 
 .header-nav {
-    max-width: 720px;
-    /* height: max-content; */
+  max-width: 1024px;
+  /* height: max-content; */
 }
 .header-list {
-    display: flex;
+  display: flex;
 }
 .header-list-item {
-    padding: 0 27px;
-    list-style: none;
-    line-height: inherit;
-    letter-spacing: 2px;
+  padding: 0 27px;
+  list-style: none;
+  line-height: inherit;
+  letter-spacing: 2px;
 }
 
 .header-list-item > a {
-    text-decoration: none;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 200;
-    font-size: 22px;
-    color: #FFFFFF;
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 22px;
+  color: var(--white);
 }
 
 /* Welcome page  */
+
+.section-title {
+  margin: 0 auto;
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--font-h2);
+  line-height: 90px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--font-gold);
+}
+
+.dark-section-title {
+  color: var(--white);
+}
+
+.section-paragraph {
+  margin: 0 auto;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: var(--font2);
+  line-height: 33px;
+  letter-spacing: 2px;
+}
+#welcome .container {
+  background-image: linear-gradient(to right, black 10%, transparent 100%),
+    url(./assets/img/welcome-slider/1.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 1000px;
+}
+
+#welcome h2 {
+  padding-top: 150px;
+  padding-bottom: 25px;
+  max-width: 600px;
+  margin-left: 0;
+  line-height: 90px;
+}
+
+#welcome h3 {
+  padding-bottom: 75px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 33px;
+}
+
+.welcome-panaroma {
+  display: table-cell;
+  width: 360px;
+  height: 75px;
+  text-align: center;
+  vertical-align: middle;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 2px;
+  text-decoration: none;
+
+  background-color: var(--dark-red);
+  border-radius: 10px;
+}
