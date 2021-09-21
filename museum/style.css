@@ -44,7 +44,6 @@ html {
 }
 
 .dark-section {
-  padding: 0 75px;
   background-color: var(--bg-dark);
 }
 
@@ -133,8 +132,12 @@ html {
   line-height: 33px;
   letter-spacing: 2px;
 }
+#welcome {
+  padding: 0 75px;
+}
+
 #welcome .container {
-    height: 810px;
+  height: 810px;
   background-image: linear-gradient(to right, black 1%, transparent 40%),
     url(./assets/img/welcome-slider/1.jpg);
   background-repeat: no-repeat;
@@ -250,3 +253,37 @@ html {
   font-size: 18px;
   line-height: 21px;
 }
+
+/* Explore */
+
+#explore .container {
+  display: flex;
+  flex-direction: wrap;
+  column-gap: 60px;
+}
+
+.dark-paragraph {
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 38px;
+  color: var(--white);
+}
+.explore-span {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: var(--font-gold);
+}
+
+/* Video */
+
+.light-paragraph {
+font-family: Roboto;
+font-weight: 300;
+font-size: 22px;
+line-height: 38px;
+color: #000000;
+}
+
