@@ -40,10 +40,11 @@ html {
   scroll-behavior: smooth;
 }
 .section {
-  padding: 0 75px;
+  padding: 75px 75px;
 }
 
 .dark-section {
+  padding: 0 75px;
   background-color: var(--bg-dark);
 }
 
@@ -54,7 +55,7 @@ html {
 .container {
   margin: 0 auto;
   max-width: 1440px;
-  height: 842px;
+  height: auto;
 }
 
 .header {
@@ -71,7 +72,7 @@ html {
 .header-logo {
   padding-left: 51px;
   font-family: Forum;
-  font-style: normal;
+
   font-weight: normal;
   font-size: 28px;
   text-transform: uppercase;
@@ -99,7 +100,7 @@ html {
 .header-list-item > a {
   text-decoration: none;
   font-family: Roboto;
-  font-style: normal;
+
   font-weight: 200;
   font-size: 22px;
   color: var(--white);
@@ -110,7 +111,7 @@ html {
 .section-title {
   margin: 0 auto;
   font-family: Forum;
-  font-style: normal;
+
   font-weight: normal;
   font-size: var(--font-h2);
   line-height: 90px;
@@ -126,18 +127,19 @@ html {
 .section-paragraph {
   margin: 0 auto;
   font-family: Roboto;
-  font-style: normal;
+
   font-weight: 300;
   font-size: var(--font2);
   line-height: 33px;
   letter-spacing: 2px;
 }
 #welcome .container {
-  background-image: linear-gradient(to right, black 10%, transparent 100%),
+    height: 810px;
+  background-image: linear-gradient(to right, black 1%, transparent 40%),
     url(./assets/img/welcome-slider/1.jpg);
   background-repeat: no-repeat;
-  background-position: right;
-  background-size: 1000px;
+  background-position: top right;
+  background-size: 1000px auto;
 }
 
 #welcome h2 {
@@ -151,7 +153,7 @@ html {
 #welcome h3 {
   padding-bottom: 75px;
   font-family: Roboto;
-  font-style: normal;
+
   font-weight: 300;
   font-size: 28px;
   line-height: 33px;
@@ -165,7 +167,7 @@ html {
   vertical-align: middle;
 
   font-family: Roboto;
-  font-style: normal;
+
   font-weight: 300;
   font-size: 22px;
   line-height: 26px;
@@ -174,4 +176,77 @@ html {
 
   background-color: var(--dark-red);
   border-radius: 10px;
+}
+
+/* Visiting */
+
+.down-line-title {
+  margin-bottom: 103px;
+  position: relative;
+}
+
+.down-line-title::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--dark-red);
+}
+
+.photo-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 75px 60px;
+}
+
+.photo-card {
+  display: block;
+  width: 440px;
+  height: 424px;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.photo-card-img {
+  width: 440px;
+  height: 285px;
+}
+
+.photo-card-title {
+  padding-top: 0;
+  margin: 25px 0 22px 0;
+  position: relative;
+  font-family: Forum;
+
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.photo-card-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 300px;
+  height: 2px;
+  background-color: var(--dark-red);
+}
+
+.photo-card-text .text-1 {
+  font-family: Roboto;
+
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 26px;
+}
+.photo-card-text .text-2 {
+  font-family: Roboto;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 21px;
 }
