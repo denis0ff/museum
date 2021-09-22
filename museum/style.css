@@ -100,9 +100,19 @@ html {
   text-decoration: none;
   font-family: Roboto;
 
-  font-weight: 200;
+  font-weight: 100;
   font-size: 22px;
   color: var(--white);
+}
+
+.h4 {
+  margin: 0 auto;
+
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: var(--font2);
+  line-height: 33px;
+  color: var(--black);
 }
 
 /* Welcome page  */
@@ -123,15 +133,6 @@ html {
   color: var(--white);
 }
 
-.section-paragraph {
-  margin: 0 auto;
-  font-family: Roboto;
-
-  font-weight: 300;
-  font-size: var(--font2);
-  line-height: 33px;
-  letter-spacing: 2px;
-}
 #welcome {
   padding: 0 75px;
 }
@@ -153,13 +154,9 @@ html {
   line-height: 90px;
 }
 
-#welcome h3 {
+#welcome .h4 {
   padding-bottom: 75px;
-  font-family: Roboto;
-
-  font-weight: 300;
-  font-size: 28px;
-  line-height: 33px;
+  letter-spacing: 2px;
 }
 
 .welcome-panaroma {
@@ -243,13 +240,13 @@ html {
 .photo-card-text .text-1 {
   font-family: Roboto;
 
-  font-weight: 200;
+  font-weight: 100;
   font-size: 22px;
   line-height: 26px;
 }
 .photo-card-text .text-2 {
   font-family: Roboto;
-  font-weight: 200;
+  font-weight: 100;
   font-size: 18px;
   line-height: 21px;
 }
@@ -279,11 +276,162 @@ html {
 
 /* Video */
 
-.light-paragraph {
-font-family: Roboto;
-font-weight: 300;
-font-size: 22px;
-line-height: 38px;
-color: #000000;
+.video-title-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
 }
+.video-title-container .section-title {
+  margin: 0 0;
+}
+
+.light-paragraph {
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 38px;
+  color: #000000;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/* Tickets */
+
+.tickets-container {
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    justify-items: stretch;
+}
+.tickets1 {
+  margin-left: 60px;
+}
+.tickets-container .h4 {
+  font-family: Roboto;
+  margin: 0 0 50px 0;
+  font-weight: bold;
+}
+
+.ticket-type-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ticket-type-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border: 2px solid;
+  border-radius: 50%;
+}
+
+/* When the radio button is hover
+.ticket-type-container:hover input ~ .checkmark {
+  border-color: var(--font-gold);
+} */
+
+/* When the radio button is checked
+.ticket-type-container input:checked ~ .checkmark {
+
+}
+*/
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.ticket-type-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.ticket-type-container .checkmark:after {
+  top: 4px;
+  left: 4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--black);
+}
+
+.ticket-amount.h4 {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.ticket-age-type {
+    margin: 10px 0 15px 60%;
+    display: block;
+    width: 150px;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 26px;
+}
+.tickets-amount {
+    display: flex;
+    margin-left: 60%;
+    max-width: 150px;
+    height: 50px;
+    justify-content: space-evenly;
+    border: 3px solid var(--black);
+}
+.tickets-amount-button {
+    all: unset;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 37px;
+}
+.tickets-amount-number {
+    all: unset;
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.ticket-total.h4 {
+    margin: 50px 0 60px 60%;
+    text-align: left;
+}
+
+.ticket-buy {
+    margin-left: 60%;
+    display: block;
+    width: 175px;
+    height: 50px;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 22px;
+    text-decoration: none;
+  
+    background-color: var(--black);
+    border-radius: 2px;
+  }
 
