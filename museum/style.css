@@ -33,12 +33,56 @@
   --font-gold: #9d8665;
   --white: #ffffff;
   --black: #000000;
-  --font-h2: 80px;
-  --font2: 32px;
 }
 html {
   scroll-behavior: smooth;
 }
+body {
+  margin: 0;
+}
+
+h1, h2 {
+  font-family: Forum;
+  font-weight: normal;
+  font-size: 80px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: Forum;
+  font-weight: normal;
+  font-size: 32px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+h4 {
+  margin: 0 auto;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+p {
+  font-family: Roboto;
+  font-weight: 100;
+  font-size: 22px;
+}
+
+a {
+  text-decoration: none;
+  font-family: Roboto;
+  font-weight: 100;
+  font-size: 22px;
+  color: var(--black);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 .section {
   padding: 75px 75px;
 }
@@ -71,7 +115,6 @@ html {
 .header-logo {
   padding-left: 51px;
   font-family: Forum;
-
   font-weight: normal;
   font-size: 28px;
   text-transform: uppercase;
@@ -97,35 +140,13 @@ html {
 }
 
 .header-list-item > a {
-  text-decoration: none;
-  font-family: Roboto;
-
-  font-weight: 100;
-  font-size: 22px;
   color: var(--white);
-}
-
-.h4 {
-  margin: 0 auto;
-
-  font-family: Roboto;
-  font-weight: 300;
-  font-size: var(--font2);
-  line-height: 33px;
-  color: var(--black);
 }
 
 /* Welcome page  */
 
 .section-title {
   margin: 0 auto;
-  font-family: Forum;
-
-  font-weight: normal;
-  font-size: var(--font-h2);
-  line-height: 90px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
   color: var(--font-gold);
 }
 
@@ -146,16 +167,16 @@ html {
   background-size: 1000px auto;
 }
 
-#welcome h2 {
+#welcome h1 {
   padding-top: 150px;
   padding-bottom: 25px;
   max-width: 600px;
   margin-left: 0;
-  line-height: 90px;
 }
 
-#welcome .h4 {
+#welcome h4 {
   padding-bottom: 75px;
+  font-weight: 100;
   letter-spacing: 2px;
 }
 
@@ -168,7 +189,7 @@ html {
 
   font-family: Roboto;
 
-  font-weight: 300;
+  font-weight: 100;
   font-size: 22px;
   line-height: 26px;
   letter-spacing: 2px;
@@ -218,13 +239,6 @@ html {
   padding-top: 0;
   margin: 25px 0 22px 0;
   position: relative;
-  font-family: Forum;
-
-  font-weight: normal;
-  font-size: 32px;
-  line-height: 35px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
 }
 
 .photo-card-title::after {
@@ -260,10 +274,6 @@ html {
 }
 
 .dark-paragraph {
-  font-family: Roboto;
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 38px;
   color: var(--white);
 }
 .explore-span {
@@ -286,11 +296,7 @@ html {
 }
 
 .light-paragraph {
-  font-family: Roboto;
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 38px;
-  color: #000000;
+  color: var(--black);
 }
 
 .video {
@@ -303,17 +309,15 @@ html {
 /* Tickets */
 
 .tickets-container {
-    display: grid;
-    grid-template-columns: 50% 25% 25%;
-    justify-items: stretch;
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  justify-items: stretch;
 }
 .tickets1 {
   margin-left: 60px;
 }
-.tickets-container .h4 {
-  font-family: Roboto;
+.tickets-container h4 {
   margin: 0 0 50px 0;
-  font-weight: bold;
 }
 
 .ticket-type-container {
@@ -323,9 +327,8 @@ html {
   margin-bottom: 25px;
   cursor: pointer;
   font-family: Roboto;
-  font-weight: 300;
+  font-weight: 100;
   font-size: 22px;
-  line-height: 26px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -378,60 +381,95 @@ html {
   background: var(--black);
 }
 
-.ticket-amount.h4 {
-    text-align: right;
-    margin-bottom: 15px;
+h4.ticket-amount  {
+  text-align: right;
+  margin-bottom: 15px;
 }
 
 .ticket-age-type {
-    margin: 10px 0 15px 60%;
-    display: block;
-    width: 150px;
-    font-family: Roboto;
-    font-weight: 300;
-    font-size: 22px;
-    line-height: 26px;
+  margin: 10px 0 15px 60%;
+  display: block;
+  width: 150px;
+  font-family: Roboto;
+  font-weight: 100;
+  font-size: 22px;
+  line-height: 26px;
 }
 .tickets-amount {
-    display: flex;
-    margin-left: 60%;
-    max-width: 150px;
-    height: 50px;
-    justify-content: space-evenly;
-    border: 3px solid var(--black);
+  display: flex;
+  margin-left: 60%;
+  max-width: 150px;
+  height: 50px;
+  justify-content: space-evenly;
+  border: 3px solid var(--black);
 }
 .tickets-amount-button {
-    all: unset;
-    font-family: Roboto;
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 37px;
+  all: unset;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 37px;
 }
 .tickets-amount-number {
-    all: unset;
-    text-align: center;
-    font-family: Roboto;
-    font-weight: 300;
-    font-size: 22px;
-    line-height: 26px;
+  all: unset;
+  padding-left: 0px;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 100;
+  font-size: 22px;
+  line-height: 26px;
 }
 
-.ticket-total.h4 {
-    margin: 50px 0 60px 60%;
-    text-align: left;
+h4.ticket-total  {
+  margin: 50px 0 60px 60%;
+  text-align: left;
 }
 
 .ticket-buy {
-    margin-left: 60%;
-    display: block;
-    width: 175px;
-    height: 50px;
-    font-family: Roboto;
-    font-weight: 300;
-    font-size: 22px;
-    text-decoration: none;
-  
-    background-color: var(--black);
-    border-radius: 2px;
-  }
+  margin-left: 51%;
+  width: 175px;
+  height: 50px;
+  font-family: Roboto;
+  font-weight: 100;
+  font-size: 22px;
 
+  background-color: var(--black);
+  border: 0px;
+  border-radius: 2px;
+}
+/* Paralax */
+
+ .paralax {
+   width: 100%;
+   height: 400px;
+   background-image: url(./assets/img/parallax.jpg);
+   background-size: cover;
+   background-attachment: fixed;
+ }
+
+/* Contacts */
+
+.contacts-container {
+  display: grid;
+  grid-template-columns: 33% 66%;
+  justify-items: stretch;
+}
+
+.contacts-info {
+  display: block;
+}
+
+h4.contacts  {
+  margin-bottom: 50px;
+}
+
+.contacts-item {
+  margin-bottom: 25px;
+  font-family: Roboto;
+  font-weight: 100;
+  font-size: 22px;
+}
+
+.contacts-map {
+  width: fit-content;
+}
