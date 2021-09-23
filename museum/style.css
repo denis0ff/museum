@@ -41,7 +41,8 @@ body {
   margin: 0;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: Forum;
   font-weight: normal;
   font-size: 80px;
@@ -306,6 +307,37 @@ ul {
   max-width: 100%;
 }
 
+/* Gallery */
+
+#gallery h2 {
+  margin-bottom: 75px;
+}
+
+.picture-container {
+  position: relative;
+  overflow-y: hidden;
+  height: 1960px;
+}
+
+.picture-inner-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px 36px;
+  height: 2900px;
+  justify-content: end;
+}
+
+.gallery-picture {
+}
+
+.gallery-shadow {
+  position: absolute;
+  bottom: 0;
+  height: 360px;
+  width: 100%;
+  background: linear-gradient(360deg, black, transparent);
+}
+
 /* Tickets */
 
 .tickets-container {
@@ -381,7 +413,7 @@ ul {
   background: var(--black);
 }
 
-h4.ticket-amount  {
+h4.ticket-amount {
   text-align: right;
   margin-bottom: 15px;
 }
@@ -420,7 +452,7 @@ h4.ticket-amount  {
   line-height: 26px;
 }
 
-h4.ticket-total  {
+h4.ticket-total {
   margin: 50px 0 60px 60%;
   text-align: left;
 }
@@ -439,13 +471,13 @@ h4.ticket-total  {
 }
 /* Paralax */
 
- .paralax {
-   width: 100%;
-   height: 400px;
-   background-image: url(./assets/img/parallax.jpg);
-   background-size: cover;
-   background-attachment: fixed;
- }
+.paralax {
+  width: 100%;
+  height: 400px;
+  background-image: url(./assets/img/parallax.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
 
 /* Contacts */
 
@@ -459,7 +491,7 @@ h4.ticket-total  {
   display: block;
 }
 
-h4.contacts  {
+h4.contacts {
   margin-bottom: 50px;
 }
 
