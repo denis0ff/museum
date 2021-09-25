@@ -102,6 +102,8 @@ ul {
   height: auto;
 }
 
+/* Header */
+
 .header {
   background-color: var(--bg-dark);
 }
@@ -161,7 +163,7 @@ ul {
 }
 
 #welcome .container {
-    position: relative;
+  position: relative;
   height: 810px;
   background-image: linear-gradient(to right, black 1%, transparent 40%),
     url(./assets/img/welcome-slider/1.jpg);
@@ -170,10 +172,15 @@ ul {
   background-size: 1000px auto;
 }
 
+.welcom-title-wrapper {
+  position: absolute;
+  top: 150px;
+  max-width: 690px;
+}
+
 #welcome h1 {
   padding-top: 150px;
   padding-bottom: 25px;
-  max-width: 600px;
   margin-left: 0;
 }
 
@@ -330,7 +337,6 @@ ul {
 }
 
 .gallery-picture {
-
 }
 
 .gallery-shadow {
@@ -342,6 +348,11 @@ ul {
 }
 
 /* Tickets */
+
+input[type='number']::-webkit-inner-spin-button, 
+input[type='number']::-webkit-outer-spin-button { 
+    display: none;
+}
 
 .tickets-container {
   display: grid;
@@ -515,6 +526,7 @@ h4.contacts {
   padding-top: 85px;
   padding-bottom: 50px;
   display: grid;
+  align-items: start;
   grid-template-columns: 25% 35% 40%;
 }
 
@@ -563,20 +575,19 @@ h4.contacts {
   color: var(--white);
 }
 
-
 /* Welcom-Slider */
 
 .welcome-slider {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    min-width: 600px;
-    min-height: 120px;
-    background-color: var(--bg-dark);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-width: 600px;
+  min-height: 120px;
+  background-color: var(--bg-dark);
 }
-.welcome-slider >* {
+.welcome-slider > * {
   color: var(--white);
 }

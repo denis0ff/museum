@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Museum</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
     <link rel="icon" href="assets/favicon.ico" />
   </head>
   <body class="museum">
     <header class="header">
       <div class="container header-container">
-        <h2 class="header-logo">Louvre</h2>
+        <h1 class="header-logo">Louvre</h1>
         <nav class="header-nav">
           <ul class="header-list">
             <li class="header-list-item">
@@ -37,16 +38,16 @@
     <main class="main">
       <section class="section dark-section" id="welcome">
         <div class="container">
-          <h1 class="section-title dark-section-title">
-            Welcome to the Louvre
-          </h1>
-          <h4 class="h4 dark-section-title">From the castle to the museum</h4>
+          <div class="welcom-title-wrapper"><h2 class="section-title dark-section-title">
+            Welcome <br>to the Louvre
+          </h2>
+          <h4 class="dark-section-title">From the castle to the museum</h4>
           <a
             class="welcome-panaroma dark-section-title"
             href="./tours/tour1.html"
             target="_blank"
             >Discover the Louvre</a
-          >
+          ></div>
           <div class="welcome-slider">
             <!-- <span class="current-counter">01</span>
             <span class="deffice">|</span>
@@ -73,7 +74,7 @@
               />
               <h3 class="photo-card-title">Royal Palace</h3>
               <span class="photo-card-text text-1"
-                >360� Virtual Tour<br
+                >360° Virtual Tour<br
               /></span>
               <span class="photo-card-text text-2"
                 >Google Street Panorama View</span
@@ -87,7 +88,7 @@
               />
               <h3 class="photo-card-title">Denon Wing</h3>
               <span class="photo-card-text text-1"
-                >360� Virtual Tour<br
+                >360° Virtual Tour<br
               /></span>
               <span class="photo-card-text text-2"
                 >Google Street Panorama View</span
@@ -101,7 +102,7 @@
               />
               <h3 class="photo-card-title">Colonnade Perrault</h3>
               <span class="photo-card-text text-1"
-                >360� Virtual Tour<br
+                >360° Virtual Tour<br
               /></span>
               <span class="photo-card-text text-2"
                 >Google Street Panorama View</span
@@ -114,7 +115,7 @@
               />
               <h3 class="photo-card-title">Greek hall</h3>
               <span class="photo-card-text text-1"
-                >360� Virtual Tour<br
+                >360° Virtual Tour<br
               /></span>
               <span class="photo-card-text text-2"
                 >Google Street Panorama View</span
@@ -127,7 +128,7 @@
               />
               <h3 class="photo-card-title">Mona Lisa</h3>
               <span class="photo-card-text text-1"
-                >360� Virtual Tour<br
+                >360° Virtual Tour<br
               /></span>
               <span class="photo-card-text text-2"
                 >Google Street Panorama View</span
@@ -140,7 +141,7 @@
               />
               <h3 class="photo-card-title">Night Palace</h3>
               <span class="photo-card-text text-1"
-                >360� Virtual Tour<br
+                >360° Virtual Tour<br
               /></span>
               <span class="photo-card-text text-2"
                 >Google Street Panorama View</span
@@ -288,7 +289,7 @@
               alt="tickets image"
             />
             <div class="tickets1">
-              <h4 class="h4 ticket-type">Ticket Type</h4>
+              <h4 class="ticket-type">Ticket Type</h4>
               <label class="ticket-type-container"
                 >Permanent exhibition
                 <input type="radio" checked="checked" name="radio" />
@@ -306,7 +307,7 @@
               </label>
             </div>
             <div class="tickets2">
-              <h4 class="h4 ticket-amount">Amount</h4>
+              <h4 class="ticket-amount">Amount</h4>
               <span class="ticket-age-type">Basic 18+</span>
               <div class="tickets-amount">
                 <button
@@ -314,7 +315,7 @@
                   type="button"
                   onclick="this.nextElementSibling.stepDown()"
                 >
-                  �
+                  –
                 </button>
                 <input
                   class="tickets-amount-number"
@@ -339,7 +340,7 @@
                   type="button"
                   onclick="this.nextElementSibling.stepDown()"
                 >
-                  �
+                  –
                 </button>
                 <input
                   class="tickets-amount-number"
@@ -357,8 +358,8 @@
                   +
                 </button>
               </div>
-              <h4 class="h4 ticket-total">Total</h4>
-              <button class="ticket-buy dark-section-title" href="">
+              <h4 class="ticket-total">Total</h4>
+              <button class="ticket-buy dark-section-title" id="buyNow">
                 Buy Now
               </button>
             </div>
@@ -371,29 +372,27 @@
           <h2 class="section-title down-line-title">Contacts</h2>
           <div class="contacts-container">
             <div class="contacts-info">
-              <h4 class="h4 contacts">
+              <h4 class="contacts">
                 Palais Royal<br />
                 Musee du Louvre
               </h4>
               <ul class="contacts-list">
                 <li class="contacts-item">address: 75001 Paris, France</li>
                 <li class="contacts-item">
-                  phone:
                   <a
                     class="contacts-link"
                     href="tel:+330140205050"
                     title="phone"
-                    >+33(0) 1 40 20 50 50</a
+                    >phone: +33(0) 1 40 20 50 50</a
                   >
                 </li>
 
                 <li class="contacts-item">
-                  mail:
                   <a
                     class="contacts-link"
                     href="mailto:info@louvre.fr"
                     title="phone"
-                    >info@louvre.fr</a
+                    >mail: info@louvre.fr</a
                   >
                 </li>
               </ul>
@@ -405,7 +404,7 @@
     </main>
     <footer class="footer dark-section">
       <div class="container footer-container">
-        <h2 class="h2 footer-logo">Louvre</h2>
+        <h2 class="footer-logo">Louvre</h2>
         <nav class="footer-nav">
           <ul class="footer-nav-list">
             <li class="footer-nav-item">
@@ -483,5 +482,125 @@
         >
       </div>
     </footer>
+
+    <div class="modal" id="booking">
+      <div class="modal-overlay">
+        <div class="modal-window">
+          <span class="modal-close">&times;</span>
+          <div class="modal-body">
+            <div class="right-column">
+              <img
+                src="./assets/svg/booking/logo-booking.svg"
+                alt="Louvre logo"
+                class="booking-logo"
+              />
+              <h2 class="booking-title section-title">Booking Tickets</h2>
+              <p class="booking-subtitle down-line-title">Tour to Louvre</p>
+              <form action="" class="booking-form">
+                <div class="date-time">
+                  <input
+                    type="date"
+                    name="Date"
+                    placeholder="aaaa"
+                    class="date"
+                  />
+                  <input type="time" name="Time" class="time" />
+                </div>
+                <input
+                  type="text"
+                  name="Name"
+                  placeholder="Name"
+                  class="name"
+                />
+
+                <input
+                  type="email"
+                  name="Email"
+                  placeholder="E-mail"
+                  class="email"
+                />
+
+                <input
+                  type="tel"
+                  name="Phone"
+                  placeholder="Phone"
+                  class="phone"
+                />
+
+                <select name="Ticket Type" class="ticket-type">
+                  <option value="">Ticket Type</option>
+                  <option value="permanent">Permanent Exhibition</option>
+                  <option value="temporary">Temporary Exhibition</option>
+                  <option value="combined">Combined Admission</option>
+                </select>
+
+                <fieldset>
+                  <p class="booking-amount-title down-line-title">
+                    Entry Ticket
+                  </p>
+                  <div class="booking-amount first-margin">
+                    <p>Basic 18+ (20 €)</p>
+                    <div class="booking-amount-counter">
+                      <button
+                        class="booking-amount-button"
+                        type="button"
+                        onclick="this.nextElementSibling.stepDown()"
+                      >
+                        –
+                      </button>
+                      <input
+                        class="booking-current-counter"
+                        type="number"
+                        min="0"
+                        max="20"
+                        value="1"
+                        readonly
+                      />
+                      <button
+                        class="booking-amount-button"
+                        type="button"
+                        onclick="this.previousElementSibling.stepUp()"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                  <div class="booking-amount">
+                    <p>Senior 65+ (10 €)</p>
+                    <div class="booking-amount-counter">
+                      <button
+                        class="booking-amount-button"
+                        type="button"
+                        onclick="this.nextElementSibling.stepDown()"
+                      >
+                        –
+                      </button>
+                      <input
+                        class="booking-current-counter"
+                        type="number"
+                        min="0"
+                        max="20"
+                        value="1"
+                        readonly
+                      />
+                      <button
+                        class="booking-amount-button"
+                        type="button"
+                        onclick="this.previousElementSibling.stepUp()"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+            <div class="left-column"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/modal.js"></script>
   </body>
 </html>
