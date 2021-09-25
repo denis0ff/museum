@@ -113,7 +113,8 @@ ul {
   align-items: center;
 }
 
-.header-logo {
+.header-logo,
+.footer-logo {
   padding-left: 51px;
   font-family: Forum;
   font-weight: normal;
@@ -160,6 +161,7 @@ ul {
 }
 
 #welcome .container {
+    position: relative;
   height: 810px;
   background-image: linear-gradient(to right, black 1%, transparent 40%),
     url(./assets/img/welcome-slider/1.jpg);
@@ -328,6 +330,7 @@ ul {
 }
 
 .gallery-picture {
+
 }
 
 .gallery-shadow {
@@ -384,15 +387,15 @@ ul {
 }
 
 /* When the radio button is hover
-.ticket-type-container:hover input ~ .checkmark {
-  border-color: var(--font-gold);
-} */
+  .ticket-type-container:hover input ~ .checkmark {
+    border-color: var(--font-gold);
+  } */
 
 /* When the radio button is checked
-.ticket-type-container input:checked ~ .checkmark {
-
-}
-*/
+  .ticket-type-container input:checked ~ .checkmark {
+  
+  }
+  */
 
 .checkmark:after {
   content: "";
@@ -505,3 +508,59 @@ h4.contacts {
 .contacts-map {
   width: fit-content;
 }
+
+/* Footer */
+
+.footer-container {
+  padding-top: 85px;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: 25% 35% 40%;
+}
+
+.footer-nav-list {
+  display: grid;
+  grid-template-columns: 257px auto;
+}
+.footer-nav-item {
+  margin-bottom: 25px;
+}
+
+.footer-nav-item > a {
+  color: var(--white);
+}
+
+.social-list {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  grid-column-gap: 50px;
+}
+
+.social-circle {
+  margin: 50% 0;
+  height: 46px;
+  width: 46px;
+  line-height: 50px;
+  border-radius: 50%;
+  border: 1px solid white;
+  text-align: center;
+}
+
+.footer-footer {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-between-line {
+  margin: 0;
+  color: #666666;
+}
+
+.footer-footer > * {
+  color: var(--white);
+}
+
+
+/* Welcom-Slider */
