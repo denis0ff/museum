@@ -539,6 +539,7 @@ h4.contacts {
 
 .social-circle {
   margin: 50% 0;
+  display: block;
   height: 46px;
   width: 46px;
   line-height: 50px;
@@ -564,3 +565,18 @@ h4.contacts {
 
 
 /* Welcom-Slider */
+
+/* .welcome-slider {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 600px;
+    min-height: 120px;
+    background-color: var(--bg-dark);
+}
+.welcome-slider >* {
+  color: var(--white);
+} */
