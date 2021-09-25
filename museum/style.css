@@ -318,10 +318,6 @@ ul {
 
 /* Gallery */
 
-#gallery h2 {
-  margin-bottom: 75px;
-}
-
 .picture-container {
   position: relative;
   overflow-y: hidden;
@@ -334,6 +330,23 @@ ul {
   gap: 24px 36px;
   height: 2900px;
   justify-content: end;
+}
+
+.gallery-column {
+  margin-top: 51px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-column:first-child {
+  margin-top: 101px;
+}
+.gallery-column:last-child {
+  margin-top: 101px;
+}
+
+.gallery-column > img {
+  margin-top: 24px;
 }
 
 .gallery-picture {
@@ -349,9 +362,9 @@ ul {
 
 /* Tickets */
 
-input[type='number']::-webkit-inner-spin-button, 
-input[type='number']::-webkit-outer-spin-button { 
-    display: none;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  display: none;
 }
 
 .tickets-container {
