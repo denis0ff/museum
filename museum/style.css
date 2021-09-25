@@ -566,7 +566,7 @@ h4.contacts {
 
 /* Welcom-Slider */
 
-/* .welcome-slider {
+.welcome-slider {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -579,4 +579,4 @@ h4.contacts {
 }
 .welcome-slider >* {
   color: var(--white);
-} */
+}
