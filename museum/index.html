@@ -216,6 +216,47 @@
               <button class="fullscreen-video"></button>
             </div>
           </div>
+          <div class="player-video">
+            <iframe
+              loading="lazy"
+              width="452"
+              height="254"
+              src="https://www.youtube.com/embed/aWmJ5DgyWPI?controls=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <iframe
+              loading="lazy"
+              width="452"
+              height="254"
+              src="https://www.youtube.com/embed/Vi5D6FKhRmo?controls=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <iframe
+              loading="lazy"
+              width="452"
+              height="254"
+              src="https://www.youtube.com/embed/NOhDysLnTvY?controls=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="player-pagination">
+            <span class="player-left"></span>
+            <span class="player-item active-item"></span>
+            <span class="player-item"></span>
+            <span class="player-item"></span>
+            <span class="player-item"></span>
+            <span class="player-item"></span>
+            <span class="player-right"></span>
+          </div>
         </div>
       </section>
       <section class="section dark-section" id="gallery">
@@ -387,7 +428,8 @@
                   +
                 </button>
               </div>
-              <h4 class="ticket-total">Total</h4>
+              <h4 class="ticket-total">Total €<span class="ticket-total-summary">220</span></h4>
+              
               <button class="ticket-buy dark-section-title" id="buyNow">
                 Buy Now
               </button>
@@ -440,14 +482,16 @@
               <a href="#visiting">Visiting</a>
             </li>
             <li class="footer-nav-item">
-              <a href="#explore">Explore</a>
-            </li>
-            <li class="footer-nav-item"><a href="#video">Video</a></li>
-            <li class="footer-nav-item">
               <a href="#gallery">Gallery</a>
             </li>
             <li class="footer-nav-item">
+              <a href="#explore">Explore</a>
+            </li>
+            <li class="footer-nav-item">
               <a href="#tickets">Tickets</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="#video">Video</a></li>
             </li>
             <li class="footer-nav-item">
               <a href="#contacts">Contacts</a>
@@ -512,20 +556,22 @@
       </div>
     </footer>
 
-    <div class="modal" id="booking">
+    <div class="modal open" id="booking">
       <div class="modal-overlay">
         <div class="modal-window">
           <span class="modal-close">&times;</span>
-          <div class="modal-body">
-            <div class="right-column">
-              <img
+            <form action="" class="booking-form">
+            <div class="modal-body">
+            <div class="left-column">
+              <div>
+                <img
                 src="./assets/svg/booking/logo-booking.svg"
                 alt="Louvre logo"
                 class="booking-logo"
               />
               <h2 class="booking-title section-title">Booking Tickets</h2>
+            </div>
               <p class="booking-subtitle down-line-title">Tour to Louvre</p>
-              <form action="" class="booking-form">
                 <div class="date-time">
                   <input
                     type="date"
@@ -622,15 +668,70 @@
                     </div>
                   </div>
                 </fieldset>
-              </form>
             </div>
-            <div class="left-column"></div>
+              <fieldset class="right-column">
+                <h4 class="right booking-subtitle">Overview</h4>
+                <h5 class="right booking-subtitle">Tour to Louvre</h5>
+                  <span class="date-result">Friday, August 19</span>
+                  <span class="time-result">16 : 30</span>
+                  <span class="type-result">Temporary exhibition</span>
+                <div class="ticket-result">
+                  <span>Basic (20 €)</span>
+                  <span class="basic-summary euro">40</span>
+                </div>
+                <div class="ticket-result">
+                  <span>Senior (10 €)</span>
+                  <span class="senior-summary euro">20</span>
+                </div>
+                <hr class="form-redline">
+                <div class="total-result">
+                  <span>Total:</span>
+                  <span class="total-summary euro">60</span>
+                </div>
+                <div class="card">
+                <div class="card-front">
+                  <span>Card number</span>
+                    
+                    <input type="number" name="Card Number" class="card-number">
+                  <span>Expiration Date</span>
+                  <div class="card-expiration">
+                    <div class="arrows">
+                      <input class="input-arrows expiration-month" type="number" min="1" max="12" name="Expiration Month">
+                      <div class="arrow-top"></div>
+                      <div class="arrow-bottom"></div>
+                    </div>
+                    <div class="arrows">
+                      <input class="input-arrows expiration-year" type="number" min="2021" max="2030" name="Expiration Year">
+                      <div class="arrow-top"></div>
+                      <div class="arrow-bottom"></div>
+                    </div>
+                  </div>
+                  <span>Cardholder Name</span>
+                    <input type="text" name="Cardholder Name">
+                    <span class="logo-visa"></span>
+                    <span class="logo-mastercard"></span>
+                </div>
+                <div class="card-back">
+                  <div class="black-line"></div>
+                  <div class="cvv">
+                  <span>CVC/CVV</span>
+                    <input type="number" name="" id="">
+
+                  <p>The last <br>3 or 4 digits <br>on back <br>of the card</p>
+                  </div>
+                </div>
+              </div>
+                <input type="submit" value="Book" class="submit-button">
+                <span class="form-logo"></span>
+              </fieldset>
           </div>
+        </form>
         </div>
       </div>
     </div>
     <script src="js/video-progress.js"></script>
     <script src="js/gallery.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/input-arrows.js"></script>
   </body>
 </html>

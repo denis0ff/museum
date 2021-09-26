@@ -18,7 +18,8 @@
   transform: translateX(-3000px);
 }
 
-.modal-window, .modal-overlay {
+.modal-window,
+.modal-overlay {
   opacity: 0;
   z-index: -100;
 }
@@ -55,7 +56,13 @@
 .modal-body {
   padding: 91px 235px;
   display: grid;
-  grid-template-columns: 45% 55%;
+  grid-template-columns: 38% auto;
+  column-gap: 40px;
+}
+
+.left-column {
+  display: grid;
+  row-gap: 20px;
 }
 
 .booking-title {
@@ -65,7 +72,7 @@
 }
 
 .booking-subtitle {
-  margin: 20px 0 73px;
+  margin: 20px 0 53px;
   font-size: 18px;
   color: var(--dark-red);
 }
@@ -73,11 +80,6 @@
 .booking-subtitle::after {
   bottom: -10px;
   opacity: 0.9;
-}
-
-.booking-form {
-  display: grid;
-  row-gap: 20px;
 }
 
 .booking-form input,
@@ -94,6 +96,7 @@ select {
 .booking-form fieldset {
   margin: 0;
   border: 1px solid var(--bg-dark);
+  box-sizing: border-box;
 }
 
 .date-time {
@@ -194,7 +197,7 @@ select {
   font-size: 18px;
   color: var(--white);
   background-color: var(--bg-dark);
-  border: none
+  border: none;
 }
 
 input.booking-current-counter {
@@ -211,3 +214,299 @@ input.booking-current-counter {
   border-bottom: 1px solid var(--bg-dark);
 }
 
+.right-column {
+  position: relative;
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.right-column .booking-subtitle {
+  margin: 0px;
+}
+
+h4.right.booking-subtitle {
+  font-size: 32px;
+  line-height: 37px;
+  color: #272727;
+}
+
+h5.right.booking-subtitle {
+  font-size: 22px;
+  line-height: 26px;
+  color: #740c11;
+  opacity: 0.9;
+}
+.date-result,
+.time-result,
+.type-result {
+  font-size: 18px;
+  line-height: 21px;
+  color: #030303;
+}
+.date-result::before {
+  content: "";
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  background-image: url(../assets/svg/booking/date.svg);
+  background-repeat: no-repeat;
+}
+.time-result::before {
+  content: "";
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  background-image: url(../assets/svg/booking/time.svg);
+  background-repeat: no-repeat;
+}
+.type-result::before {
+  content: "";
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  background-image: url(../assets/svg/booking/ticket-type-result.svg);
+  background-repeat: no-repeat;
+}
+
+.ticket-result > span:first-child::before {
+  content: "2";
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  width: 32px;
+  /* height: 20px; */
+  line-height: 21px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #a4a4a3;
+  background-color: #030303;
+  border-radius: 15%;
+}
+
+.ticket-result,
+.total-result {
+  display: flex;
+  margin-bottom: 5px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.ticket-result > span {
+  font-weight: normal;
+  font-size: 22px;
+}
+
+.euro::after {
+  content: "€";
+  margin-left: 0.3em;
+  display: inline-block;
+  vertical-align: top;
+  width: 2em;
+}
+
+.form-redline {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #740c11;
+  border: none;
+}
+
+.total-result > span {
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 37px;
+  /* identical to box height */
+
+  color: #030303;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+}
+.card input {
+  box-sizing: border-box;
+  padding: 0 10px;
+  height: 35px;
+  border: none;
+}
+.card span {
+  margin: 10px 0 5px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #161615;
+}
+.card-front {
+  position: relative;
+  padding: 5px 20px 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  height: 211px;
+  background-color: #bcbcbc;
+  border-radius: 2%;
+}
+.card-number {
+  width: 215px;
+}
+
+.card-expiration {
+  display: flex;
+}
+
+.card-expiration > input {
+  width: 100px;
+}
+
+/*  */
+
+.arrows {
+  position: relative;
+  margin-right: 15px;
+}
+
+.arrows > .input-arrows {
+  outline: none;
+  width: 100px;
+  transition: .2s;
+}
+
+.arrows:hover .input-arrows,
+.arrows:focus .input-arrows {
+  border-color: #888;
+}
+
+.arrows > .arrow-top {
+  width: 0px;
+  border: 3px solid transparent;
+  border-bottom: 1px solid #A4A4A3;
+  position: absolute;
+  top: 5%;
+  right: 5px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.arrows > .arrow-top:hover{
+  border-bottom-color: #888;
+}
+
+.arrows > .arrow-bottom {
+  width: 0px;
+  border: 3px solid transparent;
+  border-top: 1px solid #A4A4A3;
+  position: absolute;
+  top: 60%;
+  right: 5px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.arrows > .arrow-bottom:hover {
+  border-top-color: #888;
+}
+
+/*  */
+span.logo-visa {
+  position: absolute;
+  top: 34px;
+  right: 20px;
+  margin: 0;
+  display: block;
+  width: 55px;
+  height: 16px;
+  background-image: url(../assets/img/tickets/Visa.png);
+}
+
+span.logo-mastercard {
+  position: absolute;
+  top: 65px;
+  right: 20px;
+  margin: 0;
+  display: block;
+  width: 53px;
+  height: 32px;
+  background-image: url(../assets/img/tickets/Mastercard.png);
+}
+
+
+.card-back {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 360px;
+  height: 211px;
+  text-align: right;
+  background-color: #939393;
+  border-radius: 2%;
+  z-index: -1;
+}
+
+.black-line {
+  margin-top: 25px;
+  width: 100%;
+  height: 35px;
+  background-color: #161615;
+}
+
+.cvv {
+  margin: 15px 29px 0 0;
+  display: flex;
+  flex-direction: column;
+  width: 75px;
+  text-align: center;
+}
+.cvv > span {
+  margin: 0 0 5px 0;
+}
+/* .cvv > input {
+
+} */
+
+.cvv > p {
+  margin: 6px 10px 0 10px;
+  text-align: left;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+input.submit-button {
+  margin: 56px 30px 0 auto;
+  padding: 0;
+  width: 220px;
+  height: 50px;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  color: #ffffff;
+  background-color: #710707;
+}
+
+span.form-logo {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  margin: 0;
+  display: block;
+  width: 150px;
+  height: 120px;
+  background-image: url(../assets/img/tickets/form-logo.png);
+}

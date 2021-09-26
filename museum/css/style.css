@@ -62,7 +62,7 @@ h4 {
   margin: 0 auto;
   font-family: Roboto;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 28px;
 }
 
 p {
@@ -180,7 +180,7 @@ ul {
 }
 
 #welcome h4 {
-  margin-bottom: 77px;
+  margin-bottom: 75px;
   font-weight: 100;
   font-size: 28px;
   letter-spacing: 2.1px;
@@ -421,20 +421,66 @@ ul {
   background-color: transparent;
   z-index: 10;
 }
+
+.player-video {
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player-pagination {
+  display: flex;
+  justify-content: center;
+}
+.player-pagination > span {
+  margin: 0 10px;
+}
+
+.player-left {
+  display: block;
+  width: 10px;
+  height: 12px;
+  background-image: url(../assets/svg/video/left-pagination.svg);
+}
+
+.player-right {
+  display: block;
+  width: 10px;
+  height: 12px;
+  background-image: url(../assets/svg/video/right-pagination.svg);
+}
+
+.player-item {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-image: url(../assets/svg/video/pagination-dot.svg);
+}
+
+.player-item.active-item {
+  background-image: url(../assets/svg/video/active-pagination-dot.svg);
+}
+
 /* Gallery */
+
+#gallery {
+  padding-top: 76px;
+  padding-bottom: 79px;
+}
 
 .picture-container {
   position: relative;
-  overflow-y: hidden;
+  overflow: hidden;
   height: 1960px;
 }
 
 .picture-inner-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px 36px;
+  column-gap: 31px;
   height: 2900px;
-  justify-content: end;
+  justify-content: space-around;
 }
 
 .gallery-column {
@@ -451,10 +497,7 @@ ul {
 }
 
 .gallery-column > img {
-  margin-top: 24px;
-}
-
-.gallery-picture {
+  margin-top: 25px;
 }
 
 .gallery-shadow {
@@ -487,7 +530,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .ticket-type-container {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 40px;
   margin-bottom: 25px;
   cursor: pointer;
   font-family: Roboto;
@@ -547,11 +590,11 @@ input[type="number"]::-webkit-outer-spin-button {
 
 h4.ticket-amount {
   text-align: right;
-  margin-bottom: 15px;
+  margin-bottom: 26px;
 }
 
 .ticket-age-type {
-  margin: 10px 0 15px 60%;
+  margin-left: 59%;
   display: block;
   width: 150px;
   font-family: Roboto;
@@ -561,9 +604,9 @@ h4.ticket-amount {
 }
 .tickets-amount {
   display: flex;
-  margin-left: 60%;
+  margin: 14px 0 12px 58%;
   max-width: 150px;
-  height: 50px;
+  height: 43px;
   justify-content: space-evenly;
   border: 3px solid var(--black);
 }
@@ -585,17 +628,19 @@ h4.ticket-amount {
 }
 
 h4.ticket-total {
-  margin: 50px 0 60px 60%;
+  margin: 50px 0 60px 58%;
   text-align: left;
+  letter-spacing: 1.65px;
 }
 
 .ticket-buy {
-  margin-left: 51%;
+  margin-left: 52%;
   width: 175px;
   height: 50px;
   font-family: Roboto;
   font-weight: 100;
   font-size: 22px;
+  letter-spacing: 2px;
 
   background-color: var(--black);
   border: 0px;
@@ -615,7 +660,7 @@ h4.ticket-total {
 
 .contacts-container {
   display: grid;
-  grid-template-columns: 33% 66%;
+  grid-template-columns: 1fr 2fr;
   justify-items: stretch;
 }
 
@@ -628,10 +673,11 @@ h4.contacts {
 }
 
 .contacts-item {
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   font-family: Roboto;
   font-weight: 100;
   font-size: 22px;
+  letter-spacing: -0.5px;
 }
 
 .contacts-map {
@@ -642,33 +688,39 @@ h4.contacts {
 
 .footer-container {
   padding-top: 85px;
-  padding-bottom: 50px;
+  padding-bottom: 28px;
   display: grid;
   align-items: start;
-  grid-template-columns: 25% 35% 40%;
+  grid-template-columns: 23% 42% 35%;
+}
+
+.footer-logo {
+  margin: 1px 0 0;
 }
 
 .footer-nav-list {
+  margin: 0;
   display: grid;
   grid-template-columns: 257px auto;
 }
 .footer-nav-item {
-  margin-bottom: 25px;
+  margin: 3px 0px 20px 8px;
 }
 
 .footer-nav-item > a {
+  letter-spacing: 2px;
   color: var(--white);
 }
 
 .social-list {
-  display: inline-flex;
+  margin: 0;
+  display: flex;
+  grid-column-gap: 25px;
   justify-content: flex-end;
-  align-items: flex-end;
-  grid-column-gap: 50px;
 }
 
 .social-circle {
-  margin: 50% 0;
+  margin-top: 80px;
   display: block;
   height: 46px;
   width: 46px;
@@ -679,7 +731,7 @@ h4.contacts {
 }
 
 .footer-footer {
-  padding: 50px 0;
+  padding: 47px 0 50px;
   display: flex;
   justify-content: space-between;
 }
@@ -690,7 +742,14 @@ h4.contacts {
 }
 
 .footer-footer > * {
+  font-family: Roboto;
+  font-weight: 100;
+  font-size: 22px;
+  letter-spacing: 2px;
   color: var(--white);
+}
+.rsschool-link {
+  margin-left: 95px;
 }
 
 /* Welcom-Slider */
