@@ -117,14 +117,14 @@ ul {
 
 .header-logo,
 .footer-logo {
-  padding-left: 51px;
+  padding-left: 74px;
   font-family: Forum;
   font-weight: normal;
   font-size: 28px;
   text-transform: uppercase;
   color: var(--white);
-  background-image: url("assets/svg/logo.svg");
-  background-size: 26px;
+  background-image: url("../assets/svg/logo.svg");
+  background-size: 49px;
   background-position: left;
   background-repeat: no-repeat;
 }
@@ -137,10 +137,10 @@ ul {
   display: flex;
 }
 .header-list-item {
-  padding: 0 27px;
+  padding: 0 0 0 55px;
   list-style: none;
   line-height: inherit;
-  letter-spacing: 2px;
+  letter-spacing: 2.1px;
 }
 
 .header-list-item > a {
@@ -160,6 +160,7 @@ ul {
 
 #welcome {
   padding: 0 75px;
+  margin-top: -1px;
 }
 
 #welcome .container {
@@ -172,22 +173,17 @@ ul {
   background-size: 1000px auto;
 }
 
-.welcom-title-wrapper {
-  position: absolute;
-  top: 150px;
-  max-width: 690px;
-}
-
-#welcome h1 {
-  padding-top: 150px;
-  padding-bottom: 25px;
+#welcome h2 {
+  padding-top: 153px;
+  padding-bottom: 27px;
   margin-left: 0;
 }
 
 #welcome h4 {
-  padding-bottom: 75px;
+  margin-bottom: 77px;
   font-weight: 100;
-  letter-spacing: 2px;
+  font-size: 28px;
+  letter-spacing: 2.1px;
 }
 
 .welcome-panaroma {
@@ -196,15 +192,12 @@ ul {
   height: 75px;
   text-align: center;
   vertical-align: middle;
-
   font-family: Roboto;
-
   font-weight: 100;
   font-size: 22px;
   line-height: 26px;
-  letter-spacing: 2px;
+  letter-spacing: 2.2px;
   text-decoration: none;
-
   background-color: var(--dark-red);
   border-radius: 10px;
 }
@@ -219,17 +212,17 @@ ul {
 .down-line-title::after {
   content: "";
   position: absolute;
-  bottom: -25px;
+  bottom: -30px;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 2px;
   background-color: var(--dark-red);
 }
 
 .photo-cards-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 75px 60px;
+  gap: 74px 60px;
 }
 
 .photo-card {
@@ -246,8 +239,7 @@ ul {
 }
 
 .photo-card-title {
-  padding-top: 0;
-  margin: 25px 0 22px 0;
+  margin: 24px 0 22px 0;
   position: relative;
 }
 
@@ -261,18 +253,13 @@ ul {
   background-color: var(--dark-red);
 }
 
-.photo-card-text .text-1 {
-  font-family: Roboto;
-
-  font-weight: 100;
+.photo-card-text.text-1 {
+  display: block;
   font-size: 22px;
-  line-height: 26px;
+  margin-bottom: 2px;
 }
-.photo-card-text .text-2 {
-  font-family: Roboto;
-  font-weight: 100;
+.photo-card-text.text-2 {
   font-size: 18px;
-  line-height: 21px;
 }
 
 /* Explore */
@@ -280,11 +267,17 @@ ul {
 #explore .container {
   display: flex;
   flex-direction: wrap;
-  column-gap: 60px;
+  column-gap: 62px;
+}
+#explore .section-title {
+  margin-top: 5px;
+  margin-bottom: 105px;
 }
 
 .dark-paragraph {
   color: var(--white);
+  line-height: 178%;
+  word-spacing: 1px;
 }
 .explore-span {
   font-family: inherit;
@@ -293,20 +286,28 @@ ul {
   line-height: inherit;
   color: var(--font-gold);
 }
+.explore-slider {
+  margin-top: 18px;
+}
+
 
 /* Video */
 
 .video-title-container {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  align-items: center;
+  margin: -31px 0px 0;
+    padding-bottom: 62px;
+    display: grid;
+    height: 112px;
+    grid-template-columns: 50% 50%;
+    align-items: center;
 }
 .video-title-container .section-title {
   margin: 0 0;
 }
 
 .light-paragraph {
-  color: var(--black);
+  line-height: 169%;
+  font-weight: 300;
 }
 
 .video {
