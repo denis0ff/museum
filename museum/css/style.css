@@ -290,16 +290,15 @@ ul {
   margin-top: 18px;
 }
 
-
 /* Video */
 
 .video-title-container {
   margin: -31px 0px 0;
-    padding-bottom: 62px;
-    display: grid;
-    height: 112px;
-    grid-template-columns: 50% 50%;
-    align-items: center;
+  padding-bottom: 63px;
+  display: grid;
+  height: 112px;
+  grid-template-columns: 50% 50%;
+  align-items: center;
 }
 .video-title-container .section-title {
   margin: 0 0;
@@ -310,6 +309,13 @@ ul {
   font-weight: 300;
 }
 
+.video-container {
+  position: relative;
+  height: 735px;
+  background-image: url(../assets/video/poster-figma.jpg);
+  overflow-y: hidden;
+}
+
 .video {
   width: 100%;
   height: auto;
@@ -317,6 +323,104 @@ ul {
   max-width: 100%;
 }
 
+.video-controls {
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  width: 100%;
+  height: 85px;
+  column-gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-items: center;
+  background-color: var(--black);
+  z-index: 10;
+}
+
+.video-controls > * {
+  margin-right: 20px;
+}
+
+.video-progress,
+.sound-progress {
+  margin: 0;
+  background: linear-gradient(
+    to right,
+    var(--dark-red) 0%,
+    var(--dark-red) 53%,
+    #c4c4c4 53%,
+    #c4c4c4 100%
+  );
+  border: none;
+  height: 8px;
+  width: 930px;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.sound-progress {
+  background: linear-gradient(
+    to right,
+    var(--dark-red) 0%,
+    var(--dark-red) 43%,
+    #c4c4c4 43%,
+    #c4c4c4 100%
+  );
+  width: 155px;
+}
+
+.video-progress::-webkit-slider-thumb,
+.sound-progress::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  cursor: ew-resize;
+  background: #fff;
+}
+
+.play-video,
+.sound-video,
+.fullscreen-video,
+.big-play-video {
+  padding: 0;
+  background-repeat: no-repeat;
+  background-color: var(--black);
+  border: none;
+  cursor: pointer;
+}
+
+.play-video {
+  width: 23px;
+  height: 31px;
+  background-image: url(../assets/svg/video/play.svg);
+}
+
+.sound-video {
+  margin-right: 10px;
+  width: 38px;
+  height: 31px;
+  background-image: url(../assets/svg/video/volume.svg);
+}
+
+.fullscreen-video {
+  width: 35px;
+  height: 35px;
+  background-image: url(../assets/svg/video/fullscreen.svg);
+}
+
+.big-play-video {
+  position: absolute;
+  top: 218px;
+  left: 610px;
+  width: 220px;
+  height: 220px;
+  background-image: url(../assets/svg/video/big-play.svg);
+  background-color: transparent;
+  z-index: 10;
+}
 /* Gallery */
 
 .picture-container {

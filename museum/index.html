@@ -38,16 +38,16 @@
     <main class="main">
       <section class="section dark-section" id="welcome">
         <div class="container">
-            <h2 class="section-title dark-section-title">
-              Welcome <br />to the Louvre
-            </h2>
-            <h4 class="dark-section-title">From the castle to the museum</h4>
-            <a
-              class="welcome-panaroma dark-section-title"
-              href="./tours/tour1.html"
-              target="_blank"
-              >Discover the Louvre</a
-            >
+          <h2 class="section-title dark-section-title">
+            Welcome <br />to the Louvre
+          </h2>
+          <h4 class="dark-section-title">From the castle to the museum</h4>
+          <a
+            class="welcome-panaroma dark-section-title"
+            href="./tours/tour1.html"
+            target="_blank"
+            >Discover the Louvre</a
+          >
           <div class="welcome-slider">
             <!-- <span class="current-counter">01</span>
             <span class="deffice">|</span>
@@ -186,12 +186,36 @@
               enjoy masterpieces such as Mona Lisa or Hammurabi's Code
             </p>
           </div>
-          <video
-            class="video"
-            src="assets/video/video0.mp4"
-            poster="assets/video/poster0.jpg"
-            controls
-          ></video>
+          <div class="video-container">
+            <!-- <video
+              class="video"
+              src="assets/video/video0.mp4"
+              poster="assets/video/poster0.jpg"
+              controls
+            ></video> -->
+            <button class="big-play-video"></button>
+            <div class="video-controls">
+              <button class="play-video"></button>
+              <input
+                type="range"
+                value="53"
+                min="0"
+                max="100"
+                step="0.5"
+                class="video-progress"
+              />
+              <button class="sound-video"></button>
+              <input
+                type="range"
+                value="43"
+                min="0"
+                max="100"
+                step="0.5"
+                class="sound-progress"
+              />
+              <button class="fullscreen-video"></button>
+            </div>
+          </div>
         </div>
       </section>
       <section class="section dark-section" id="gallery">
@@ -605,6 +629,7 @@
         </div>
       </div>
     </div>
+    <script src="js/video-progress.js"></script>
     <script src="js/gallery.js"></script>
     <script src="js/modal.js"></script>
   </body>
