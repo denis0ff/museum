@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Museum</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/interactive.css" />
     <link rel="stylesheet" href="./css/modal.css" />
+    <link rel="stylesheet" href="./css/welcom-pagination.css" />
     <link rel="icon" href="assets/favicon.ico" />
   </head>
   <body class="museum">
@@ -49,16 +51,22 @@
             >Discover the Louvre</a
           >
           <div class="welcome-slider">
-            <!-- <span class="current-counter">01</span>
-            <span class="deffice">|</span>
-            <span class="max-counter">05</span>
-            <ul class="welcom-slides-list">
-              <li class="welcom-slides-item"></li>
-              <li class="welcom-slides-item"></li>
-              <li class="welcom-slides-item"></li>
-              <li class="welcom-slides-item"></li>
-              <li class="welcom-slides-item"></li>
-            </ul> -->
+            <div class="counter-pagination">
+              <span class="current-counter">01</span>
+              <span class="deffice">|</span>
+              <span class="max-counter">05</span>
+            </div>
+            <ul class="pagination-list">
+              <li class="pagination-item active-item"></li>
+              <li class="pagination-item"></li>
+              <li class="pagination-item"></li>
+              <li class="pagination-item"></li>
+              <li class="pagination-item"></li>
+            </ul>
+            <div class="pagination-arrows">
+              <button class="pagination-left"></button>
+              <button class="pagination-right"></button>
+            </div>
           </div>
         </div>
       </section>
@@ -174,6 +182,7 @@
           <img
             class="explore-slider"
             src="assets/img/explore-slider/after.jpg"
+            alt="Explore image"
           />
         </div>
       </section>
@@ -221,9 +230,9 @@
               loading="lazy"
               width="452"
               height="254"
+              style="border: 0px"
               src="https://www.youtube.com/embed/aWmJ5DgyWPI?controls=0"
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
@@ -231,9 +240,9 @@
               loading="lazy"
               width="452"
               height="254"
+              style="border: 0px"
               src="https://www.youtube.com/embed/Vi5D6FKhRmo?controls=0"
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
@@ -241,21 +250,21 @@
               loading="lazy"
               width="452"
               height="254"
+              style="border: 0px"
               src="https://www.youtube.com/embed/NOhDysLnTvY?controls=0"
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
           </div>
           <div class="player-pagination">
-            <span class="player-left"></span>
+            <button class="player-left"></button>
             <span class="player-item active-item"></span>
             <span class="player-item"></span>
             <span class="player-item"></span>
             <span class="player-item"></span>
             <span class="player-item"></span>
-            <span class="player-right"></span>
+            <button class="player-right"></button>
           </div>
         </div>
       </section>
@@ -428,8 +437,10 @@
                   +
                 </button>
               </div>
-              <h4 class="ticket-total">Total €<span class="ticket-total-summary">220</span></h4>
-              
+              <h4 class="ticket-total">
+                Total €<span class="ticket-total-summary">220</span>
+              </h4>
+
               <button class="ticket-buy dark-section-title" id="buyNow">
                 Buy Now
               </button>
@@ -450,20 +461,24 @@
               <ul class="contacts-list">
                 <li class="contacts-item">address: 75001 Paris, France</li>
                 <li class="contacts-item">
+                  phone:
                   <a
                     class="contacts-link"
                     href="tel:+330140205050"
                     title="phone"
-                    >phone: +33(0) 1 40 20 50 50</a
+                  >
+                    +33(0) 1 40 20 50 50</a
                   >
                 </li>
 
                 <li class="contacts-item">
+                  mail:
                   <a
                     class="contacts-link"
                     href="mailto:info@louvre.fr"
                     title="phone"
-                    >mail: info@louvre.fr</a
+                  >
+                    info@louvre.fr</a
                   >
                 </li>
               </ul>
@@ -491,7 +506,7 @@
               <a href="#tickets">Tickets</a>
             </li>
             <li class="footer-nav-item">
-              <a href="#video">Video</a></li>
+              <a href="#video">Video</a>
             </li>
             <li class="footer-nav-item">
               <a href="#contacts">Contacts</a>
@@ -501,7 +516,11 @@
         <ul class="social-list">
           <li class="social-item">
             <a class="social-circle" href="https://www.youtube.com/user/louvre">
-              <img src="./assets/svg/social/social1.svg" alt="Louvre Youtube" />
+              <img
+                src="./assets/svg/social/social1.svg"
+                alt="Louvre Youtube"
+                class="img-svg"
+              />
             </a>
           </li>
           <li class="social-item">
@@ -556,29 +575,24 @@
       </div>
     </footer>
 
-    <div class="modal open" id="booking">
+    <div class="modal" id="booking">
       <div class="modal-overlay">
         <div class="modal-window">
           <span class="modal-close">&times;</span>
-            <form action="" class="booking-form">
+          <form action="EMPTY" class="booking-form">
             <div class="modal-body">
-            <div class="left-column">
-              <div>
-                <img
-                src="./assets/svg/booking/logo-booking.svg"
-                alt="Louvre logo"
-                class="booking-logo"
-              />
-              <h2 class="booking-title section-title">Booking Tickets</h2>
-            </div>
-              <p class="booking-subtitle down-line-title">Tour to Louvre</p>
-                <div class="date-time">
-                  <input
-                    type="date"
-                    name="Date"
-                    placeholder="aaaa"
-                    class="date"
+              <div class="left-column">
+                <div>
+                  <img
+                    src="./assets/svg/booking/logo-booking.svg"
+                    alt="Louvre logo"
+                    class="booking-logo"
                   />
+                  <h2 class="booking-title section-title">Booking Tickets</h2>
+                </div>
+                <p class="booking-subtitle down-line-title">Tour to Louvre</p>
+                <div class="date-time">
+                  <input type="date" name="Date" class="date" />
                   <input type="time" name="Time" class="time" />
                 </div>
                 <input
@@ -601,14 +615,15 @@
                   placeholder="Phone"
                   class="phone"
                 />
-
-                <select name="Ticket Type" class="ticket-type">
-                  <option value="">Ticket Type</option>
-                  <option value="permanent">Permanent Exhibition</option>
-                  <option value="temporary">Temporary Exhibition</option>
-                  <option value="combined">Combined Admission</option>
-                </select>
-
+                <div class="select-wrapper">
+                  <select name="Ticket Type" class="ticket-type">
+                    <option value="">Ticket Type</option>
+                    <option value="permanent">Permanent Exhibition</option>
+                    <option value="temporary">Temporary Exhibition</option>
+                    <option value="combined">Combined Admission</option>
+                  </select>
+                  <div class="select-arrow"></div>
+                </div>
                 <fieldset>
                   <p class="booking-amount-title down-line-title">
                     Entry Ticket
@@ -668,70 +683,97 @@
                     </div>
                   </div>
                 </fieldset>
-            </div>
+              </div>
               <fieldset class="right-column">
                 <h4 class="right booking-subtitle">Overview</h4>
                 <h5 class="right booking-subtitle">Tour to Louvre</h5>
-                  <span class="date-result">Friday, August 19</span>
-                  <span class="time-result">16 : 30</span>
-                  <span class="type-result">Temporary exhibition</span>
+                <span class="date-result">Friday, August 19</span>
+                <span class="time-result">16 : 30</span>
+                <span class="type-result">Temporary exhibition</span>
                 <div class="ticket-result">
                   <span>Basic (20 €)</span>
-                  <span class="basic-summary euro">40</span>
+                  <div class="summary-wrapper">
+                    <span class="basic-summary euro">40</span>
+                  </div>
                 </div>
                 <div class="ticket-result">
                   <span>Senior (10 €)</span>
-                  <span class="senior-summary euro">20</span>
+                  <div class="summary-wrapper">
+                    <span class="senior-summary euro">20</span>
+                  </div>
                 </div>
-                <hr class="form-redline">
+                <hr class="form-redline" />
                 <div class="total-result">
                   <span>Total:</span>
-                  <span class="total-summary euro">60</span>
+                  <div class="summary-wrapper">
+                    <span class="total-summary euro">60</span>
+                  </div>
                 </div>
                 <div class="card">
-                <div class="card-front">
-                  <span>Card number</span>
-                    
-                    <input type="number" name="Card Number" class="card-number">
-                  <span>Expiration Date</span>
-                  <div class="card-expiration">
-                    <div class="arrows">
-                      <input class="input-arrows expiration-month" type="number" min="1" max="12" name="Expiration Month">
-                      <div class="arrow-top"></div>
-                      <div class="arrow-bottom"></div>
+                  <div class="card-front">
+                    <span>Card number</span>
+                    <input
+                      type="number"
+                      name="Card Number"
+                      class="card-number"
+                    />
+                    <span>Expiration Date</span>
+                    <div class="card-expiration">
+                      <div class="arrows">
+                        <input
+                          class="input-arrows expiration-month"
+                          type="number"
+                          min="1"
+                          max="12"
+                          value="03"
+                          name="Expiration Month"
+                        />
+                        <div class="card-line"></div>
+                        <div class="arrow-top"></div>
+                        <div class="arrow-bottom"></div>
+                      </div>
+                      <div class="arrows">
+                        <input
+                          class="input-arrows expiration-year"
+                          type="number"
+                          min="2021"
+                          max="2030"
+                          value="2024"
+                          name="Expiration Year"
+                        />
+                        <div class="card-line"></div>
+                        <div class="arrow-top"></div>
+                        <div class="arrow-bottom"></div>
+                      </div>
                     </div>
-                    <div class="arrows">
-                      <input class="input-arrows expiration-year" type="number" min="2021" max="2030" name="Expiration Year">
-                      <div class="arrow-top"></div>
-                      <div class="arrow-bottom"></div>
-                    </div>
-                  </div>
-                  <span>Cardholder Name</span>
-                    <input type="text" name="Cardholder Name">
+                    <span>Cardholder Name</span>
+                    <input type="text" name="Cardholder Name" />
                     <span class="logo-visa"></span>
                     <span class="logo-mastercard"></span>
-                </div>
-                <div class="card-back">
-                  <div class="black-line"></div>
-                  <div class="cvv">
-                  <span>CVC/CVV</span>
-                    <input type="number" name="" id="">
-
-                  <p>The last <br>3 or 4 digits <br>on back <br>of the card</p>
+                  </div>
+                  <div class="card-back">
+                    <div class="black-line"></div>
+                    <div class="cvv">
+                      <span>CVC/CVV</span>
+                      <input type="number" name="CVV" />
+                      <p>
+                        The last <br />3 or 4 digits <br />on back <br />of the
+                        card
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-                <input type="submit" value="Book" class="submit-button">
+                <button class="submit-button ripple" type="button">Book</button>
                 <span class="form-logo"></span>
               </fieldset>
-          </div>
-        </form>
+            </div>
+          </form>
         </div>
       </div>
     </div>
     <script src="js/video-progress.js"></script>
     <script src="js/gallery.js"></script>
     <script src="js/modal.js"></script>
-    <script src="js/input-arrows.js"></script>
+    <script src="js/ripple.js"></script>
   </body>
 </html>
