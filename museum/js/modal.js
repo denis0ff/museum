@@ -16,7 +16,7 @@ function modalActivity() {
   };
 
   window.onclick = function (event) {
-    if (event.target == overlay) {
+    if (event.target == overlay || event.target == span) {
       closing = true;
       modal.classList.remove("open");
       modal.classList.add("hide");
