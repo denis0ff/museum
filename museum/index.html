@@ -9,12 +9,17 @@
     <link rel="stylesheet" href="./css/interactive.css" />
     <link rel="stylesheet" href="./css/modal.css" />
     <link rel="stylesheet" href="./css/welcom-pagination.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <link rel="stylesheet" href="./css/burger-menu.css" />
     <link rel="icon" href="assets/favicon.ico" />
   </head>
   <body class="museum">
     <header class="header">
       <div class="container header-container">
         <h1 class="header-logo">Louvre</h1>
+        <a href="#" class="burger-menu_button">
+          <span class="burger-menu_lines"></span>
+        </a>
         <nav class="header-nav">
           <ul class="header-list">
             <li class="header-list-item">
@@ -23,7 +28,9 @@
             <li class="header-list-item">
               <a href="#explore">Explore</a>
             </li>
-            <li class="header-list-item"><a href="#video">Video</a></li>
+            <li class="header-list-item">
+              <a href="#video">Video</a>
+            </li>
             <li class="header-list-item">
               <a href="#gallery">Gallery</a>
             </li>
@@ -40,16 +47,25 @@
     <main class="main">
       <section class="section dark-section" id="welcome">
         <div class="container">
-          <h2 class="section-title dark-section-title">
-            Welcome <br />to the Louvre
-          </h2>
-          <h4 class="dark-section-title">From the castle to the museum</h4>
-          <a
-            class="welcome-panaroma dark-section-title"
-            href="./tours/tour1.html"
-            target="_blank"
-            >Discover the Louvre</a
-          >
+          <div class="title">
+            <h2 class="section-title dark-section-title">
+              Welcome <br />to the Louvre
+            </h2>
+            <h4 class="dark-section-title">From the castle to the museum</h4>
+            <a
+              class="welcome-panaroma dark-section-title"
+              href="./tours/tour1.html"
+              target="_blank"
+              >Discover the Louvre</a
+            >
+          </div>
+          <div class="slider-image-container">
+            <img src="./assets/img/welcome-slider/1.jpg" alt="image1" order='1' class="slider-image" />
+            <img src="./assets/img/welcome-slider/2.jpg" alt="image2" order='2' class="slider-image" />
+            <img src="./assets/img/welcome-slider/3.jpg" alt="image3" order='3' class="slider-image" />
+            <img src="./assets/img/welcome-slider/4.jpg" alt="image4" order='4' class="slider-image" />
+            <img src="./assets/img/welcome-slider/5.jpg" alt="image5" order='5' class="slider-image" />
+          </div>
           <div class="welcome-slider">
             <div class="counter-pagination">
               <span class="current-counter">01</span>
@@ -179,11 +195,11 @@
               had been damaged in any way, but because it looked different.
             </p>
           </div>
-          <img
+          <div class="explore-slider-container"><img
             class="explore-slider"
             src="assets/img/explore-slider/after.jpg"
             alt="Explore image"
-          />
+          /></div>
         </div>
       </section>
       <section class="section video-section" id="video">
@@ -775,5 +791,6 @@
     <script src="js/gallery.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/ripple.js"></script>
+    <script src="js/burgerMenu.js"></script>
   </body>
 </html>

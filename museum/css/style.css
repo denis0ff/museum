@@ -138,13 +138,13 @@ ul {
 }
 .header-list-item {
   padding: 0 0 0 55px;
-  list-style: none;
-  line-height: inherit;
   letter-spacing: 2.1px;
+  color: var(--white);
 }
 
-.header-list-item > a {
+.header-list-item a {
   color: var(--white);
+  line-height: 8rem;
 }
 
 /* Welcome page  */
@@ -166,20 +166,19 @@ ul {
 #welcome .container {
   position: relative;
   height: 810px;
-  background-image: linear-gradient(to right, black 1%, transparent 40%),
-    url(../assets/img/welcome-slider/1.jpg);
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: 1000px auto;
 }
 
 #welcome h2 {
+  position: relative;
+  z-index: 10;
   padding-top: 153px;
   padding-bottom: 27px;
   margin-left: 0;
 }
 
 #welcome h4 {
+  position: relative;
+  z-index: 10;
   margin-bottom: 75px;
   font-weight: 100;
   font-size: 28px;
@@ -187,6 +186,8 @@ ul {
 }
 
 .welcome-panaroma {
+  position: relative;
+  z-index: 10;
   display: table-cell;
   width: 360px;
   height: 75px;
@@ -251,7 +252,7 @@ ul {
   width: 300px;
   height: 2px;
   background-color: var(--dark-red);
-  transition: .5s ease-in;
+  transition: 0.5s ease-in;
 }
 
 .photo-card-text.text-1 {
@@ -287,7 +288,7 @@ ul {
   line-height: inherit;
   color: var(--font-gold);
 }
-.explore-slider {
+.explore-slider-container {
   margin-top: 18px;
 }
 
@@ -760,4 +761,24 @@ h4.contacts {
   margin-left: 95px;
 }
 
-
+.burger-menu_button {
+  display: none;
+}
+.slider-image-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  width: 1000px;
+  height: 750px;
+  overflow: hidden;
+}
+.slider-image-container::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 100%;
+  width: 40%;
+  background: linear-gradient(to right, black, rgba(0, 0, 0, 0));
+}
