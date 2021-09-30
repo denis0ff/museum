@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="./css/interactive.css" />
     <link rel="stylesheet" href="./css/modal.css" />
     <link rel="stylesheet" href="./css/welcom-pagination.css" />
-    <link rel="stylesheet" href="./css/media.css" />
+    <link rel="stylesheet" href="./css/media-1024.css" />
+    <link rel="stylesheet" href="./css/media-768.css" />
     <link rel="stylesheet" href="./css/burger-menu.css" />
     <link rel="icon" href="assets/favicon.ico" />
   </head>
@@ -247,7 +248,7 @@
               width="452"
               height="254"
               style="border: 0px"
-              src="https://www.youtube.com/embed/aWmJ5DgyWPI?controls=0"
+              src="https://www.youtube.com/embed/aWmJ5DgyWPI?controls=0 '+videourl+'?modestbranding=1"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
@@ -257,7 +258,7 @@
               width="452"
               height="254"
               style="border: 0px"
-              src="https://www.youtube.com/embed/Vi5D6FKhRmo?controls=0"
+              src="https://www.youtube.com/embed/Vi5D6FKhRmo?controls=0 '+videourl+'?modestbranding=1"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
@@ -267,7 +268,7 @@
               width="452"
               height="254"
               style="border: 0px"
-              src="https://www.youtube.com/embed/NOhDysLnTvY?controls=0"
+              src="https://www.youtube.com/embed/NOhDysLnTvY?controls=0 '+videourl+'?modestbranding=1"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
@@ -378,11 +379,7 @@
         <div class="container">
           <h2 class="section-title down-line-title">Buy Tickets</h2>
           <div class="tickets-container">
-            <img
-              class=""
-              src="assets/img/tickets/tickets0.jpg"
-              alt="tickets image"
-            />
+            <div class="tickets-image"></div>
             <div class="tickets1">
               <h4 class="ticket-type">Ticket Type</h4>
               <label class="ticket-type-container"
@@ -499,7 +496,7 @@
                 </li>
               </ul>
             </div>
-            <img src="./assets/img/map.jpg" alt="map" class="contacts-map" />
+            <div class="contacts-map"></div>
           </div>
         </div>
       </section>

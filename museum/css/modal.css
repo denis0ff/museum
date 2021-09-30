@@ -76,6 +76,7 @@
   margin: -2px 0 53px 2px;
   font-weight: normal;
   font-size: 18px;
+  color: #710707;
   color: var(--dark-red);
 }
 
@@ -415,6 +416,7 @@ h5.right.booking-subtitle {
   height: 211px;
   background-color: #bcbcbc;
   border-radius: 2%;
+  z-index: 2;
 }
 .card-number {
   width: 215px;
@@ -520,7 +522,7 @@ span.logo-mastercard {
   text-align: right;
   background-color: #939393;
   border-radius: 2%;
-  z-index: -1;
+  z-index: 1;
 }
 
 .black-line {
