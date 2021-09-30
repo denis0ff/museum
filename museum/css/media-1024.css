@@ -1,12 +1,12 @@
 @media screen and (max-width: 1590px) {
+  main {
+    overflow: hidden;
+  }
+
   .section {
     padding: 53px 20px 30px;
   }
-  .photo-cards-container {
-    justify-content: center;
-    text-align: left;
-    gap: 32px 70px;
-  }
+
   .header-container {
     margin: 0 20px;
   }
@@ -20,6 +20,10 @@
   .header-list {
     margin-right: 20px;
   }
+  .modal-body {
+    padding: 75px 27px;
+  }
+  
 }
 
 @media screen and (max-width: 1320px) {
@@ -50,6 +54,7 @@
   }
   .header-container {
     margin: 0;
+    padding: 0 18px;
     height: 130px;
   }
   .header-nav {
@@ -91,7 +96,6 @@
   }
 
   .header-logo {
-    margin-left: 20px;
     font-size: calc(181% - 1px);
   }
 
@@ -135,16 +139,17 @@
   .photo-cards-container {
     justify-content: center;
     text-align: left;
-    gap: 32px 70px;
+    gap: 57px 106px;
+    margin-bottom: 25px;
   }
 
   .photo-card {
-    width: 368px;
-    height: 373px;
+    max-width: 334px;
+    height: auto;
   }
   .photo-card-img {
-    width: 330px;
-    height: 214px;
+    width: 100%;
+    height: auto;
   }
 
   .photo-card-title {
@@ -157,9 +162,6 @@
   .photo-card-title::after {
     bottom: -12px;
     width: 149px;
-  }
-  .photo-card > * {
-    margin-left: 20px;
   }
   .photo-card-text.text-2 {
     font-size: 16px;

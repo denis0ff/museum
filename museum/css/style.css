@@ -315,6 +315,8 @@ ul {
   position: relative;
   height: 735px;
   background-image: url(../assets/video/poster-figma.jpg);
+  background-position: 50%;
+  background-size: contain;
   overflow-y: hidden;
 }
 
@@ -790,4 +792,10 @@ h4.contacts {
   height: 100%;
   width: 40%;
   background: linear-gradient(to right, black, rgba(0, 0, 0, 0));
+}
+
+
+.player-video iframe {
+  max-width: 452px;
+  max-height: 254px;
 }

@@ -9,9 +9,7 @@
   }
 
   .burger-menu_button {
-    position: absolute;
-    top: 45px;
-    right: 15px;
+    position: relative;
     z-index: 20;
     display: block;
     width: 40px;
