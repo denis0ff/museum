@@ -101,13 +101,6 @@
   color: #030303;
 }
 
-.booking-form fieldset {
-  margin: 0;
-  padding-bottom: 13px;
-  border: 1px solid var(--bg-dark);
-  box-sizing: border-box;
-}
-
 .date-time {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -253,11 +246,14 @@ input.booking-current-counter {
 
 .right-column {
   position: relative;
-  padding: 27px 30px;
+  margin: 0;
+  padding: 27px 30px 13px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  border: 1px solid var(--bg-dark);
+  box-sizing: border-box;
 }
 
 .right-column .booking-subtitle {

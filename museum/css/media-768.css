@@ -1,6 +1,6 @@
 @media screen and (max-width: 980px) {
-  .player-video iframe:nth-child(3) {
-    display: none;
+  .player-video iframe {
+    width: 245px;
   }
 
   .footer-container {
@@ -46,7 +46,7 @@
     margin-top: 26px;
   }
   #welcome {
-    padding: 2px 22px;
+    padding: 0 22px;
   }
   #welcome .container {
     height: 861px;
@@ -73,27 +73,16 @@
     display: none;
   }
 
-  .slider-image-container {
-    position: relative;
-    padding-right: 25px;
-    height: 63%;
-  }
-
-  .welcome-slider {
-    min-height: 102px;
-    min-width: calc(80% + 294px);
-  }
-
   .down-line-title::after {
-    bottom: -23px;
+    bottom: -28px;
   }
 
   .down-line-title {
-    margin-bottom: 64px;
+    margin-bottom: 68px;
   }
 
   .photo-cards-container {
-    gap: 46px 58px;
+    gap: 40px 58px;
   }
   .photo-card {
     max-width: 279px;
@@ -102,6 +91,7 @@
   .photo-card-title {
     font-size: 22px;
     line-height: 24px;
+    margin-bottom: 26px;
   }
 
   .photo-card .photo-card-text {
@@ -110,7 +100,7 @@
   }
 
   #visiting {
-    padding-bottom: 62px;
+    padding-bottom: 52px;
   }
 
   .explore-container p {
@@ -121,11 +111,12 @@
     margin-bottom: 0;
   }
 
-  .explore-slide-container {
-    margin-top: 60px;
+  .explore-slider-container {
+    margin-top: 72px;
   }
+
   #explore {
-    padding-bottom: 45px;
+    padding-bottom: 38px;
   }
 
   .video-title-container {
@@ -149,8 +140,8 @@
   }
 
   .big-play-video {
-    top: 125px;
-    left: 323px;
+    top: calc(50% - 70px);
+    left: calc(50% - 41px);
     background-size: 37%;
   }
 
@@ -170,6 +161,10 @@
   .player-video iframe {
     height: 197px;
     width: 353px;
+  }
+
+  .player-video iframe:nth-last-child(3) {
+    display: none;
   }
   .player-video {
     margin: 22px 0;
@@ -194,6 +189,10 @@
   }
   .picture-container {
     height: 1045px;
+  }
+  #tickets h2,
+  #contacts h2 {
+    margin-bottom: 65px;
   }
   .tickets-container {
     grid-template-columns: 61% 39%;
@@ -245,6 +244,53 @@
   .contacts-map {
     margin: 22px 0 5px;
     height: 478px;
-}
+  }
 
+  .modal-body {
+    grid-template-columns: 74%;
+    row-gap: 50px;
+    padding: 80px 25px;
+  }
+
+  #booking .down-line-title {
+    margin-bottom: 35px;
+    margin-top: 0;
+  }
+
+  #booking .down-line-title::after {
+    bottom: -11px;
+  }
+
+  .left-column {
+    row-gap: 20px;
+  }
+
+  #booking .booking-amount-title.down-line-title {
+    margin-bottom: 24px;
+    margin-top: 5px;
+  }
+
+  .right-column {
+    padding: 25px 15px 23px;
+  }
+
+  .modal-close {
+    right: 120px;
+  }
+
+  .modal-overlay {
+    position: absolute;
+    height: 100%;
+  }
+  .modal-window {
+    height: 1479px;
+  }
+  .total-result {
+    margin-bottom: 15px;
+  }
+  span.form-logo {
+    right: 16px;
+  }
+
+  
 }

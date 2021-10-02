@@ -23,7 +23,6 @@
   .modal-body {
     padding: 75px 27px;
   }
-  
 }
 
 @media screen and (max-width: 1320px) {
@@ -57,51 +56,9 @@
     padding: 0 18px;
     height: 130px;
   }
-  .header-nav {
-    display: block;
-    position: absolute;
-    left: -300px;
-    bottom: calc(100% - 587px);
-    width: 297px;
-    height: 450px;
-    background-color: var(--bg-dark);
-    z-index: 1;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -o-transition: 1s;
-    transition: 1s;
-  }
-
-  .header-list {
-    flex-direction: column;
-  }
-
-  .header-list-item {
-    padding: 0 0 0 55px;
-    letter-spacing: 1.5px;
-  }
-
-  .header-list-item a {
-    display: inline-block;
-    width: 106px;
-    line-height: 48px;
-  }
-
-  .header-list-item::after {
-    content: "";
-    display: inline-block;
-    width: 8px;
-    height: 12px;
-    background: url(../assets/svg/media/header-arrow.svg) no-repeat;
-  }
-
+  
   .header-logo {
     font-size: calc(181% - 1px);
-  }
-
-  .welcome-slider {
-    min-width: calc(80% + 1px);
-    justify-content: center;
   }
 
   .welcome-panaroma {
@@ -124,11 +81,6 @@
     margin-bottom: 47px;
   }
 
-  .slider-image-container {
-    width: 700px;
-    height: 525px;
-  }
-
   .down-line-title::after {
     bottom: -14px;
   }
@@ -137,7 +89,6 @@
   }
 
   .photo-cards-container {
-    justify-content: center;
     text-align: left;
     gap: 57px 106px;
     margin-bottom: 25px;
@@ -315,7 +266,6 @@
   }
   .paralax {
     background-size: 187%;
-    background-attachment: initial;
     background-position: 50% 71%;
   }
 

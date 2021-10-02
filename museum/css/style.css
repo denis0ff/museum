@@ -189,16 +189,11 @@ ul {
   position: relative;
   z-index: 10;
   display: table-cell;
-  max-width: 360px;
+  width: 360px;
   height: 75px;
   text-align: center;
   vertical-align: middle;
-  font-family: Roboto;
-  font-weight: 100;
-  font-size: 22px;
-  line-height: 26px;
   letter-spacing: 2.2px;
-  text-decoration: none;
   background-color: var(--dark-red);
   border-radius: 10px;
 }
@@ -223,6 +218,7 @@ ul {
 .photo-cards-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 74px 60px;
 }
 
@@ -316,7 +312,7 @@ ul {
   height: 735px;
   background-image: url(../assets/video/poster-figma.jpg);
   background-position: 50%;
-  background-size: contain;
+  background-size: cover;
   overflow-y: hidden;
 }
 
@@ -416,8 +412,8 @@ ul {
 
 .big-play-video {
   position: absolute;
-  top: 218px;
-  left: 610px;
+  top: 29%;
+  left: 42%;
   width: 220px;
   height: 220px;
   background-image: url(../assets/svg/video/big-play.svg);
@@ -535,7 +531,6 @@ input[type="number"]::-webkit-outer-spin-button {
   background: url(../assets/img/tickets/tickets0.jpg) no-repeat;
   background-size: 100%;
 }
-
 
 .tickets1 {
   margin-left: 60px;
@@ -794,8 +789,11 @@ h4.contacts {
   background: linear-gradient(to right, black, rgba(0, 0, 0, 0));
 }
 
-
 .player-video iframe {
   max-width: 452px;
   max-height: 254px;
+}
+
+.header-small {
+  display: none;
 }
