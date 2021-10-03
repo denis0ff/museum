@@ -125,7 +125,8 @@
     background-position: left;
   }
   .sound-video {
-    background-size: 60%;
+    margin: 0 -8px;
+    background-size: 47%;
     background-position: left;
   }
   .fullscreen-video {

@@ -221,6 +221,7 @@
   }
 
   .tickets-image {
+    height: 100%;
     background-position: 50% 52%;
     background-size: cover;
   }
@@ -329,7 +330,7 @@
   }
 
   .explore-slider-container {
-    margin: 65px 133px 0px;
+    margin: 65px calc(13% + 7px) 0px;
     width: 73%;
   }
 

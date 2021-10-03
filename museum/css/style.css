@@ -400,13 +400,13 @@ main, footer, header {
 }
 
 .sound-video {
-  width: 38px;
+  width: 45px;
   height: 31px;
   background-image: url(../assets/svg/video/volume.svg);
 }
 
 .fullscreen-video {
-  width: 35px;
+  width: 40px;
   height: 35px;
   background-image: url(../assets/svg/video/fullscreen.svg);
 }
@@ -437,6 +437,8 @@ main, footer, header {
 .player-left, .player-right {
   margin: 0 10px;
   display: block;
+  width: 12px;
+  height: 15px;
   border: none;
   background: none;
   background-image: url(../assets/svg/video/left-pagination.svg);
@@ -522,6 +524,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .tickets-image {
+  height: 545px;
   background: url(../assets/img/tickets/tickets0.jpg) no-repeat;
   background-size: 100%;
 }
