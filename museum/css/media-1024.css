@@ -135,6 +135,7 @@
   }
   .video-container {
     height: 505px;
+    background-position: 50% 110%;
   }
 
   .video-controls {
@@ -182,8 +183,9 @@
   }
 
   .player-video iframe {
+    overflow: hidden;
     height: 170px;
-    width: 300px;
+    max-width: 300px;
   }
   #video {
     padding-bottom: 62px;

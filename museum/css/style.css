@@ -84,10 +84,11 @@ ul {
   padding: 0;
 }
 
-main, footer, header {
+main,
+footer,
+header {
   overflow: hidden;
 }
-
 
 .section {
   padding: 75px 75px;
@@ -312,8 +313,9 @@ main, footer, header {
 .video-container {
   position: relative;
   height: 735px;
-  background-image: url(../assets/video/poster-figma.webp);
-  background-position: 50%;
+  background-image: url(../assets/video/poster0.webp);
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
   background-size: cover;
 }
 
@@ -434,7 +436,8 @@ main, footer, header {
   justify-content: center;
 }
 
-.player-left, .player-right {
+.player-left,
+.player-right {
   margin: 0 10px;
   display: block;
   width: 12px;
@@ -785,7 +788,10 @@ h4.contacts {
 
 .player-video iframe {
   max-width: 452px;
-  max-height: 254px;
+  height: 254px;
+  width: 100%;
+  border: 0;
+  overflow: hidden;
 }
 
 .header-small {
@@ -826,7 +832,8 @@ h4.contacts {
   border-radius: 50%;
 }
 
-.explore-picture-delimeter::before, .explore-picture-delimeter::after {
+.explore-picture-delimeter::before,
+.explore-picture-delimeter::after {
   content: "";
   position: absolute;
   left: 45%;

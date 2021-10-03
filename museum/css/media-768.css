@@ -1,6 +1,6 @@
 @media screen and (max-width: 980px) {
   .player-video iframe {
-    width: 245px;
+    max-width: 245px;
   }
 
   .footer-container {
@@ -132,6 +132,7 @@
   }
   .video-container {
     height: 385px;
+    background-position: 50% 160%;
   }
   .video-controls {
     height: 51px;
@@ -168,7 +169,7 @@
 
   .player-video iframe {
     height: 197px;
-    width: 48%;
+    max-width: 49%;
   }
 
   .player-video iframe:nth-last-child(1) {
