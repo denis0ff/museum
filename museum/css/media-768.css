@@ -149,9 +149,11 @@
   }
 
   .big-play-video {
-    top: calc(50% - 70px);
-    left: calc(50% - 41px);
-    background-size: 37%;
+    top: 33%;
+    left: calc(44% + 4px);
+    width: 80px;
+    height: 80px;
+    background-size: 100%;
   }
 
   .sound-video {

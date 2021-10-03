@@ -380,6 +380,7 @@ header {
 .fullscreen-video,
 .big-play-video {
   padding: 15px;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   background-color: var(--black);
   border: none;

@@ -179,6 +179,8 @@
   .big-play-video {
     top: calc(50% - 104px);
     left: calc(50% - 75px);
+    width: 16%;
+    height: 30%;
     background-size: 150px;
   }
 
