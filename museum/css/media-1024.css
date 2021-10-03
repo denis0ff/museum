@@ -1,8 +1,4 @@
 @media screen and (max-width: 1590px) {
-  main {
-    overflow: hidden;
-  }
-
   .section {
     padding: 53px 20px 30px;
   }
@@ -22,16 +18,6 @@
   }
   .modal-body {
     padding: 75px 27px;
-  }
-}
-
-@media screen and (max-width: 1320px) {
-  #explore .container {
-    flex-direction: column;
-  }
-  .explore-slider-container {
-    text-align: center;
-    margin-top: 60px;
   }
 }
 
@@ -56,7 +42,7 @@
     padding: 0 18px;
     height: 130px;
   }
-  
+
   .header-logo {
     font-size: calc(181% - 1px);
   }
@@ -332,7 +318,22 @@
   #booking .booking-amount-title.down-line-title {
     margin-bottom: 20px;
   }
+
   #booking .booking-amount-title.down-line-title::after {
     bottom: -6px;
+  }
+
+
+  #explore .container {
+    grid-template-columns: auto;
+  }
+
+  .explore-slider-container {
+    margin: 65px 133px 0px;
+    width: 73%;
+  }
+
+  .explore-picture-delimeter {
+      left: 58%;
   }
 }

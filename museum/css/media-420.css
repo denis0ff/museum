@@ -1,4 +1,276 @@
+@media screen and (max-width: 520px) {
+  .footer-container {
+    grid-template-columns: 100%;
+  }
+
+  .footer-nav-list {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 27px 21%;
+    padding: 23px 20px;
+  }
+
+  .footer-nav-item {
+    margin: 0;
+  }
+
+  .social-list {
+    margin: 17px auto 0;
+    grid-column-end: 2;
+    grid-column-gap: 5px;
+  }
+
+  .footer-footer * {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
 @media screen and (max-width: 420px) {
+  h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
 
+  .header-container {
+    height: 70%;
+  }
 
+  .header-logo,
+  .footer-logo {
+    font-size: calc(100% - 1px);
+    line-height: calc(100% + 26px);
+    background-size: calc(100% - 105px);
+    padding-left: calc(14% + 2px);
+  }
+  #welcome .container {
+    height: 560px;
+  }
+  #welcome h2 {
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
+
+  #welcome h4 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .photo-card-title {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 5px;
+  }
+
+  .photo-cards-container {
+    gap: 39px 58px;
+  }
+  .photo-card .photo-card-text {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0px;
+  }
+
+  #visiting {
+    padding-bottom: 16px;
+  }
+
+  .explore-slider-container {
+    margin: 65px 0 0;
+    max-width: 100%;
+    height: 370px;
+  }
+  .explore-picture-delimeter {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+  }
+
+  .explore-picture-delimeter::after,
+  .explore-picture-delimeter::before {
+    width: 2px;
+    height: 175px;
+  }
+
+  .explore-picture-delimeter::after {
+    top: 113%;
+  }
+
+  .explore-picture-delimeter::before {
+    bottom: 113%;
+  }
+
+  .video-title-container {
+    height: 50px;
+  }
+
+  .video-container {
+    height: 225px;
+  }
+  .video-controls {
+    gap: 0;
+    height: 52px;
+  }
+  .video-controls > * {
+    margin: 0px 21px;
+  }
+
+  .big-play-video {
+    top: calc(50% - 52px);
+    left: calc(50% - 25px);
+    background-size: 23%;
+  }
+
+  .play-video {
+    background-size: 45%;
+    background-position: left;
+  }
+  .sound-video {
+    background-size: 60%;
+    background-position: left;
+  }
+  .fullscreen-video {
+    margin: 0 5px;
+    background-size: 57%;
+    background-position: left;
+  }
+  .video-progress {
+    margin: 0px 0 55px;
+  }
+  .player-video {
+    margin: 40px 0;
+  }
+  .player-video iframe {
+    height: 100px;
+  }
+
+  .player-item {
+    width: 8px;
+    height: 8px;
+  }
+
+  .player-left,
+  .player-right {
+    background-size: 50%;
+  }
+
+  #video {
+    padding-bottom: 40px;
+  }
+
+  .picture-container {
+    height: 600px;
+  }
+
+  .tickets-container {
+    grid-template-columns: 100%;
+  }
+
+  .tickets-image {
+    height: 162px;
+  }
+
+  .tickets2 > * {
+    margin: 0 auto 18px 27%;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  h4.ticket-amount {
+    margin: 40px auto 20px;
+  }
+
+  h4.ticket-total {
+    margin: 39px auto 39px 39%;
+    letter-spacing: 0;
+  }
+
+  h4.ticket-total span {
+    margin-left: 5px;
+  }
+
+  #tickets {
+    padding-bottom: 22px;
+  }
+
+  h4.contacts {
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .contacts-item {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .contacts-link {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .contacts-map {
+    height: 248px;
+  }
+
+  #contacts {
+    padding-bottom: 35px;
+  }
+
+  .footer-logo {
+    background-size: 8%;
+    margin: 0 20px 5px;
+    padding-left: 50px;
+  }
+
+  .rsschool-link {
+    display: none;
+  }
+
+  .modal-window {
+    height: 1754px;
+  }
+
+  .booking-title {
+    font-size: 32px;
+    line-height: 35px;
+  }
+
+  .left-column {
+    row-gap: 19px;
+  }
+
+  .date-time {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  .date-time input {
+    width: 87%;
+  }
+
+  #booking p.down-line-title {
+    margin-bottom: 33px;
+    margin-top: -6px;
+  }
+
+  #booking .ticket-type {
+    margin: 9px 0 0px;
+  }
+
+  span.form-logo {
+    background-size: 80%;
+    right: -18px;
+  }
+
+  .card-front {
+    width: 328px;
+  }
+  .card-back {
+    width: 328px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 400px) {
+.footer-nav-list {
+  gap: 27px 0%;
+}
 }

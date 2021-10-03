@@ -5,22 +5,29 @@
 
   .footer-container {
     grid-template-columns: 38% 62%;
+    padding-bottom: 37px;
   }
 
   .footer-nav-list {
-    grid-template-columns: 257px auto;
+    grid-template-columns: 54% auto;
   }
   .footer-nav-item {
     margin: 24px 0px 2px 24px;
   }
 
   .social-list {
-    margin: -67px 317px;
+    margin: 46px 14% 0 auto;
+    grid-column-end: 3;
+    grid-column-start: 1;
     grid-column-gap: 25px;
   }
 
-  .footer-container {
-    padding-bottom: 101px;
+  .social-circle {
+    margin-top: 0;
+  }
+
+  .footer-footer {
+    padding: 40px 20px;
   }
   /* /////////////////// */
   .modal-body {
@@ -112,7 +119,8 @@
   }
 
   .explore-slider-container {
-    margin-top: 72px;
+    margin: 71px 0 5px;
+    width: 100%;
   }
 
   #explore {
@@ -160,17 +168,17 @@
 
   .player-video iframe {
     height: 197px;
-    width: 353px;
+    width: 48%;
   }
 
-  .player-video iframe:nth-last-child(3) {
+  .player-video iframe:nth-last-child(1) {
     display: none;
   }
   .player-video {
     margin: 22px 0;
   }
 
-  .player-pagination span {
+  .player-item {
     margin: 0 9px;
   }
 
@@ -190,6 +198,11 @@
   .picture-container {
     height: 1045px;
   }
+
+  #tickets {
+    padding-bottom: 38px;
+  }
+
   #tickets h2,
   #contacts h2 {
     margin-bottom: 65px;
@@ -215,9 +228,6 @@
   h4.ticket-total {
     margin: 39px 0 41px 21%;
   }
-  #tickets {
-    padding-bottom: 40px;
-  }
 
   .paralax {
     height: 300px;
@@ -241,15 +251,25 @@
     letter-spacing: 0;
     margin-bottom: 15px;
   }
+
   .contacts-map {
     margin: 22px 0 5px;
     height: 478px;
   }
 
+  .modal-overlay {
+    overflow: scroll;
+  }
+
+  .modal-window {
+    max-width: 590px;
+    height: 1479px;
+  }
+
   .modal-body {
-    grid-template-columns: 74%;
+    grid-template-columns: 100%;
     row-gap: 50px;
-    padding: 80px 25px;
+    padding: 80px 30px 0;
   }
 
   #booking .down-line-title {
@@ -270,20 +290,15 @@
     margin-top: 5px;
   }
 
+  .date-time {
+    column-gap: 25px;
+  }
+  .date-time input {
+    width: 82%;
+  }
+
   .right-column {
     padding: 25px 15px 23px;
-  }
-
-  .modal-close {
-    right: 120px;
-  }
-
-  .modal-overlay {
-    position: absolute;
-    height: 100%;
-  }
-  .modal-window {
-    height: 1479px;
   }
   .total-result {
     margin-bottom: 15px;
@@ -292,5 +307,4 @@
     right: 16px;
   }
 
-  
 }

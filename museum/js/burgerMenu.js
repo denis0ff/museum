@@ -8,6 +8,7 @@ function burgerMenu() {
   
   button.addEventListener("click", toggle);
   links.forEach(item => item.addEventListener("click", toggle));
+  
   function toggle() {
     if (menu.classList.contains('active')) {
       menu.classList.remove('active')

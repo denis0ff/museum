@@ -558,6 +558,7 @@ span.form-logo {
   width: 150px;
   height: 120px;
   background-image: url(../assets/img/tickets/form-logo.png);
+  background-repeat: no-repeat;
 }
 
 .submit-button {
