@@ -173,15 +173,15 @@
     height: 194px;
     grid-column-end: 3;
     grid-column-start: 1;
-    background-image: url(../assets/img/header/header-image-1.png);
+    background-image: url(../assets/img/header/header-image-1.webp);
   }
   .header-image:nth-child(2) {
     height: 160px;
-    background-image: url(../assets/img/header/header-image-2.png);
+    background-image: url(../assets/img/header/header-image-2.webp);
   }
   .header-image:nth-child(3) {
     height: 160px;
-    background-image: url(../assets/img/header/header-image-3.png);
+    background-image: url(../assets/img/header/header-image-3.webp);
   }
 
   .header-social-list {
