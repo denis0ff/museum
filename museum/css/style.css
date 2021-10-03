@@ -1,31 +1,23 @@
 @font-face {
   font-family: Forum;
   src: url("../assets/fonts/Forum.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: Roboto;
   src: url("../assets/fonts/Roboto-Thin.ttf");
   font-weight: 100;
-}
-
-@font-face {
-  font-family: Roboto;
-  src: url("../assets/fonts/Roboto-Light.ttf");
-  font-weight: 300;
+  font-display: swap;
 }
 
 @font-face {
   font-family: Roboto;
   src: url("../assets/fonts/Roboto-Regular.ttf");
   font-weight: 500;
+  font-display: swap;
 }
 
-@font-face {
-  font-family: Roboto;
-  src: url("../assets/fonts/Roboto-Bold.ttf");
-  font-weight: 700;
-}
 
 :root {
   --bg-dark: #030303;
@@ -307,7 +299,6 @@ header {
 
 .light-paragraph {
   line-height: 169%;
-  font-weight: 300;
 }
 
 .video-container {
