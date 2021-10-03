@@ -72,12 +72,12 @@
     font-size: 20px;
   }
 
-  .slider-image-container {
+  div.slider-image-container {
     width: 700px;
     height: 525px;
   }
 
-  .slider-image-container::after {
+  div.slider-image-container::after {
     background: none;
   }
 
@@ -132,7 +132,7 @@
     margin-left: 113%;
   }
 
-  .slider-image-container {
+  div.slider-image-container {
     position: relative;
     padding-right: 25px;
     width: 100%;
@@ -141,7 +141,7 @@
 }
 
 @media screen and (max-width: 420px) {
-  .slider-image-container {
+  div.slider-image-container {
     height: calc(50% + 5px);
   }
   .welcome-slider {
