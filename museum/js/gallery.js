@@ -7,7 +7,7 @@ function shuffle() {
   let addInColumn = '';
   for (let column of galleryColumns) {
     while (i < 15) {
-      addInColumn += `<img class="gallery-picture" src="assets/img/galery/galery${images[i]}.jpg" alt="picture ${images[i]}">`;
+      addInColumn += `<img class="gallery-picture" src="assets/img/galery/galery${images[i]}.webp" alt="picture ${images[i]}">`;
       i++;
       if (i == 4 || i == 9) break;
     }
