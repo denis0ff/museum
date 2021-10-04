@@ -1,4 +1,4 @@
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 550px) {
   .footer-container {
     grid-template-columns: 100%;
   }
@@ -22,6 +22,14 @@
   .footer-footer * {
     font-size: 16px;
     line-height: 22px;
+  }
+
+  .modal-window {
+    height: 1754px;
+  }
+
+  .card-back {
+    position: relative;
   }
 }
 
@@ -227,10 +235,6 @@
     display: none;
   }
 
-  .modal-window {
-    height: 1754px;
-  }
-
   .booking-title {
     font-size: 32px;
     line-height: 35px;
@@ -263,12 +267,8 @@
     right: -18px;
   }
 
-  .card-front {
-    width: 328px;
-  }
-  .card-back {
-    width: 328px;
-    position: relative;
+  .card-front, .card-back {
+    width: 100%;
   }
 }
 
@@ -276,4 +276,13 @@
 .footer-nav-list {
   gap: 27px 0%;
 }
+
+.card-front {
+  padding: 5px 6% 15px;
+}
+
+span.logo-mastercard, span.logo-visa, span.form-logo {
+  display: none;
+}
+
 }
