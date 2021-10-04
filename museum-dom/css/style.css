@@ -759,24 +759,6 @@ h4.contacts {
 .burger-menu_button {
   display: none;
 }
-.slider-image-container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: flex;
-  width: 1000px;
-  height: 750px;
-  overflow: hidden;
-}
-.slider-image-container::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  height: 100%;
-  width: 40%;
-  background: linear-gradient(to right, black, rgba(0, 0, 0, 0));
-}
 
 .player-video iframe {
   max-width: 452px;

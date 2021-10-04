@@ -14,12 +14,20 @@
     <link rel="stylesheet" href="./css/burger-menu.css" />
     <link rel="stylesheet" href="./css/interactive.css" />
     <link rel="icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="./css/chief-slider.css" />
+    <script defer src="./js/chief-slider.js"></script>
     <script defer src="js/video-progress.js"></script>
     <script defer src="js/gallery.js"></script>
     <script defer src="js/modal.js"></script>
     <script defer src="js/ripple.js"></script>
-    <script defer src="js/burgerMenu.js"></script>
-    <script defer src="js/selfCheck.js"></script>
+    <script defer src="js/burger-menu.js"></script>
+    <script defer src="js/self-check.js"></script>
+    <script defer src="js/before-after-slider.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new ChiefSlider(".slider");
+      });
+    </script>
   </head>
   <body class="museum">
     <header class="header">
@@ -127,58 +135,59 @@
               >Discover the Louvre</a
             >
           </div>
-          <div class="slider-image-container">
-            <img
-              src="./assets/img/welcome-slider/1.webp"
-              alt="image1"
-              order="1"
-              class="slider-image"
-            />
-            <img
-              loading="lazy"
-              src="./assets/img/welcome-slider/2.webp"
-              alt="image2"
-              order="2"
-              class="slider-image"
-            />
-            <img
-              loading="lazy"
-              src="./assets/img/welcome-slider/3.webp"
-              alt="image3"
-              order="3"
-              class="slider-image"
-            />
-            <img
-              loading="lazy"
-              src="./assets/img/welcome-slider/4.webp"
-              alt="image4"
-              order="4"
-              class="slider-image"
-            />
-            <img
-              loading="lazy"
-              src="./assets/img/welcome-slider/5.webp"
-              alt="image5"
-              order="5"
-              class="slider-image"
-            />
-          </div>
-          <div class="welcome-slider">
-            <div class="counter-pagination">
-              <span class="current-counter">01</span>
-              <span class="deffice">|</span>
-              <span class="max-counter">05</span>
+          <div class="slider" id="welcome-slider">
+            <div class="slider__container">
+              <div class="welcome-slider-wrapper slider__wrapper">
+                <div class="welcome-slider-items slider__items">
+                  <img
+                    src="./assets/img/welcome-slider/1.webp"
+                    alt="image1"
+                    class="slider-image slider__item"
+                  />
+                  <img
+                    loading="lazy"
+                    src="./assets/img/welcome-slider/2.webp"
+                    alt="image2"
+                    class="slider-image slider__item"
+                  />
+                  <img
+                    loading="lazy"
+                    src="./assets/img/welcome-slider/3.webp"
+                    alt="image3"
+                    class="slider-image slider__item"
+                  />
+                  <img
+                    loading="lazy"
+                    src="./assets/img/welcome-slider/4.webp"
+                    alt="image4"
+                    class="slider-image slider__item"
+                  />
+                  <img
+                    loading="lazy"
+                    src="./assets/img/welcome-slider/5.webp"
+                    alt="image5"
+                    class="slider-image slider__item"
+                  />
+                </div>
+              </div>
             </div>
-            <ul class="pagination-list">
-              <li class="pagination-item active-item"></li>
-              <li class="pagination-item"></li>
-              <li class="pagination-item"></li>
-              <li class="pagination-item"></li>
-              <li class="pagination-item"></li>
-            </ul>
-            <div class="pagination-arrows">
-              <button class="pagination-left"></button>
-              <button class="pagination-right"></button>
+            <div class="welcome-slider">
+              <div class="counter-pagination">
+                <span class="current-counter">01</span>
+                <span class="deffice">|</span>
+                <span class="max-counter">05</span>
+              </div>
+              <ul class="pagination-list slider__indicators">
+                <li data-slide-to="0" class="pagination-item active"></li>
+                <li data-slide-to="1" class="pagination-item"></li>
+                <li data-slide-to="2" class="pagination-item"></li>
+                <li data-slide-to="3" class="pagination-item"></li>
+                <li data-slide-to="4" class="pagination-item"></li>
+              </ul>
+              <div class="pagination-arrows">
+                <button class="pagination-left slider__control" data-slide="prev"></button>
+                <button class="pagination-right slider__control" data-slide="next"></button>
+              </div>
             </div>
           </div>
         </div>
@@ -299,8 +308,8 @@
             </p>
           </div>
           <div class="explore-slider-container">
-            <div class="explore-picture-img"></div>
-            <div class="explore-picture-delimeter"></div>
+            <div class="explore-picture-img secondary__img"></div>
+            <div class="explore-picture-delimeter dragger" draggable="false"></div>
             <div class="explore-picture-img explore-picture-overlay"></div>
           </div>
         </div>
