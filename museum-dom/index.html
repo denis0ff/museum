@@ -5,27 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Louvre</title>
-    <link rel="stylesheet" href="./css/welcom-pagination.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/modal.css" />
-    <link rel="stylesheet" href="./css/media-1024.css" />
-    <link rel="stylesheet" href="./css/media-768.css" />
-    <link rel="stylesheet" href="./css/media-420.css" />
-    <link rel="stylesheet" href="./css/burger-menu.css" />
-    <link rel="stylesheet" href="./css/interactive.css" />
+    <link rel="stylesheet" href="css/welcome-slider.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/media-1024.css" />
+    <link rel="stylesheet" href="css/media-768.css" />
+    <link rel="stylesheet" href="css/media-420.css" />
+    <link rel="stylesheet" href="css/burger-menu.css" />
+    <link rel="stylesheet" href="css/interactive.css" />
+    <link rel="stylesheet" href="css/video-slider.css" />
+    <link rel="stylesheet" href="css/chief-slider.css" />
     <link rel="icon" href="assets/favicon.ico" />
-    <link rel="stylesheet" href="./css/chief-slider.css" />
-    <script defer src="./js/chief-slider.js"></script>
+
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script defer src="js/chief-slider.js"></script>
     <script defer src="js/video-progress.js"></script>
-    <script defer src="js/gallery.js"></script>
+    <script defer src="js/gallery-shuffle.js"></script>
+    <script defer src="js/gallery-slide.js"></script>
     <script defer src="js/modal.js"></script>
     <script defer src="js/ripple.js"></script>
     <script defer src="js/burger-menu.js"></script>
     <script defer src="js/self-check.js"></script>
     <script defer src="js/before-after-slider.js"></script>
+
+    <script
+      defer
+      src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"
+    ></script>
+    <script defer src="js/contacts-map.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        new ChiefSlider(".slider");
+        var elms = document.querySelectorAll(".slider");
+        for (var i = 0, len = elms.length; i < len; i++) {
+          // инициализация elms[i] в качестве слайдера
+          new ChiefSlider(elms[i]);
+        }
       });
     </script>
   </head>
@@ -185,8 +202,14 @@
                 <li data-slide-to="4" class="pagination-item"></li>
               </ul>
               <div class="pagination-arrows">
-                <button class="pagination-left slider__control" data-slide="prev"></button>
-                <button class="pagination-right slider__control" data-slide="next"></button>
+                <button
+                  class="pagination-left slider__control"
+                  data-slide="prev"
+                ></button>
+                <button
+                  class="pagination-right slider__control"
+                  data-slide="next"
+                ></button>
               </div>
             </div>
           </div>
@@ -309,7 +332,10 @@
           </div>
           <div class="explore-slider-container">
             <div class="explore-picture-img secondary__img"></div>
-            <div class="explore-picture-delimeter dragger" draggable="false"></div>
+            <div
+              class="explore-picture-delimeter dragger"
+              draggable="false"
+            ></div>
             <div class="explore-picture-img explore-picture-overlay"></div>
           </div>
         </div>
@@ -324,12 +350,6 @@
             </p>
           </div>
           <div class="video-container">
-            <!-- <video
-              class="video"
-              src="assets/video/video0.mp4"
-              poster="assets/video/poster0.jpg"
-              controls
-            ></video> -->
             <button class="big-play-video"></button>
             <div class="video-controls">
               <button class="play-video"></button>
@@ -353,33 +373,93 @@
               <button class="fullscreen-video"></button>
             </div>
           </div>
-          <div class="player-video">
-            <iframe
-              srcdoc="<style>html, body, a, img {display: block; width: 100%; height: 100%; margin: 0; padding: 0;} a:before, a:after {position: absolute; content: ''; left: 50%; top: 50%;} a:before {margin: -24px 0 0 -34px;
-                background: rgba(31,31,30,.8); padding-top: 45px; width: 67px; border-radius: 18px / 17px;} a:after {margin: -12px 0 0 -6px; border: 10px solid transparent; border-left: 18px solid #fff;} a:hover:before {background: #c0171c;}</style><a href='https://www.youtube.com/embed/aWmJ5DgyWPI?controls=0+videourl+?modestbranding=1'><img src='./assets/video/poster3.webp'></a>"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              srcdoc="<style>html, body, a, img {display: block; width: 100%; height: 100%; margin: 0; padding: 0;} a:before, a:after {position: absolute; content: ''; left: 50%; top: 50%;} a:before {margin: -24px 0 0 -34px;
-                background: rgba(31,31,30,.8); padding-top: 45px; width: 67px; border-radius: 18px / 17px;} a:after {margin: -12px 0 0 -6px; border: 10px solid transparent; border-left: 18px solid #fff;} a:hover:before {background: #c0171c;}</style><a href='https://www.youtube.com/embed/Vi5D6FKhRmo?controls=0+videourl+?modestbranding=1'><img src='./assets/video/poster1.webp'></a>"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              srcdoc="<style>html, body, a, img {display: block; width: 100%; height: 100%; margin: 0; padding: 0;} a:before, a:after {position: absolute; content: ''; left: 50%; top: 50%;} a:before {margin: -24px 0 0 -34px;
-                background: rgba(31,31,30,.8); padding-top: 45px; width: 67px; border-radius: 18px / 17px;} a:after {margin: -12px 0 0 -6px; border: 10px solid transparent; border-left: 18px solid #fff;} a:hover:before {background: #c0171c;}</style><a href='https://www.youtube.com/embed/NOhDysLnTvY?controls=0+videourl+?modestbranding=1'><img src='./assets/video/poster2.webp'></a>"
-              allowfullscreen
-            ></iframe>
+
+          <div class="slider video-slider" id="video-slider">
+            <div class="slider__container">
+              <div class="slider__wrapper">
+                <div class="slider__items video-slider-list video-list">
+                  <div class="slider__item video-slider-item">
+                    <iframe
+                      loading="lazy"
+                      width="452"
+                      height="254"
+                      style="border: 0px"
+                      src="https://www.youtube.com/embed/aWmJ5DgyWPI?controls=0+videourl+?modestbranding=1"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="slider__item video-slider-item">
+                    <iframe
+                      loading="lazy"
+                      width="452"
+                      height="254"
+                      style="border: 0px"
+                      src="https://www.youtube.com/embed/Vi5D6FKhRmo?controls=0+videourl+?modestbranding=1"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="slider__item video-slider-item">
+                    <iframe
+                      loading="lazy"
+                      width="452"
+                      height="254"
+                      style="border: 0px"
+                      src="https://www.youtube.com/embed/NOhDysLnTvY?controls=0+videourl+?modestbranding=1"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="slider__item video-slider-item">
+                    <iframe
+                      loading="lazy"
+                      width="452"
+                      height="254"
+                      style="border: 0px"
+                      src="https://www.youtube.com/embed/zp1BXPX8jcU?controls=0+videourl+?modestbranding=1"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div class="slider__item video-slider-item">
+                    <iframe
+                      loading="lazy"
+                      width="452"
+                      height="254"
+                      style="border: 0px"
+                      src="https://www.youtube.com/embed/2OR0OCr6uRE?controls=0+videourl+?modestbranding=1"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Кнопки для перехода к предыдущему и следующему слайду -->
+            <div class="player-pagination">
+              <button
+                class="player-left slider__control"
+                data-slide="prev"
+              ></button>
+              <ul class="player-pagination-list slider__indicators">
+                <li data-slide-to="0" class="player-item active"></li>
+                <li data-slide-to="1" class="player-item"></li>
+                <li data-slide-to="2" class="player-item"></li>
+                <li data-slide-to="3" class="player-item"></li>
+                <li data-slide-to="4" class="player-item"></li>
+              </ul>
+              <button
+                class="player-right slider__control"
+                data-slide="next"
+              ></button>
+            </div>
           </div>
-          <div class="player-pagination">
-            <button class="player-left"></button>
-            <span class="player-item active-item"></span>
-            <span class="player-item"></span>
-            <span class="player-item"></span>
-            <span class="player-item"></span>
-            <span class="player-item"></span>
-            <button class="player-right"></button>
-          </div>
-        </div>
       </section>
       <section class="section dark-section" id="gallery">
         <div class="container">
@@ -391,30 +471,30 @@
                   loading="lazy"
                   src="./assets/img/galery/galery1.webp"
                   alt="picture 1"
-                  class="gallery-picture"
+                  class="gallery-picture align-bottom slide-in"
                 />
                 <img
                   loading="lazy"
                   src="./assets/img/galery/galery2.webp"
                   alt="picture 2"
-                  class="gallery-picture"
+                  class="gallery-picture align-bottom slide-in"
                 />
                 <img
                   loading="lazy"
                   src="./assets/img/galery/galery3.webp"
                   alt="picture 3"
-                  class="gallery-picture"
+                  class="gallery-picture align-bottom slide-in"
                 />
                 <img
                   loading="lazy"
                   src="./assets/img/galery/galery4.webp"
                   alt="picture 4"
-                  class="gallery-picture"
+                  class="gallery-picture align-bottom slide-in"
                 /><img
                   loading="lazy"
                   src="./assets/img/galery/galery5.webp"
                   alt="picture 5"
-                  class="gallery-picture"
+                  class="gallery-picture align-bottom slide-in"
                 />
               </div>
               <div class="gallery-column">
@@ -422,31 +502,31 @@
                   loading="lazy"
                   src="./assets/img/galery/galery6.webp"
                   alt="picture 6"
-                  class="gallery-picture"
+                  class='gallery-picture align-bottom slide-in'
                 />
                 <img
                   loading="lazy"
                   src="./assets/img/galery/galery7.webp"
                   alt="picture 7"
-                  class="gallery-picture"
+                  class='gallery-picture align-bottom slide-in'
                 />
                 <img
                   loading="lazy"
                   src="./assets/img/galery/galery8.webp"
                   alt="picture 8"
-                  class="gallery-picture"
+                  class='gallery-picture align-bottom slide-in'
                 />
                 <img
                   loading="lazy"
                   src="./assets/img/galery/galery9.webp"
                   alt="picture 9"
-                  class="gallery-picture"
+                  class='gallery-picture align-bottom slide-in'
                 />
                 <img
                   loading="lazy"
                   src="./assets/img/galery/galery10.webp"
                   alt="picture 10"
-                  class="gallery-picture"
+                  class='gallery-picture align-bottom slide-in'
                 />
               </div>
               <div class="gallery-column">
@@ -454,31 +534,31 @@
                   loading="lazy"
                   src="./assets/img/galery/galery11.webp"
                   alt="picture 11"
-                  class="gallery-picture"
+                  class='gallery-picture align-bottom slide-in'
                 />
                 <img
                   loading="lazy"
                   src="./assets/img/galery/galery12.webp"
                   alt="picture 12"
-                  class="gallery-picture"
+                  class='gallery-picture align-bottom slide-in'
                 />
                 <img
                   loading="lazy"
                   src="./assets/img/galery/galery13.webp"
                   alt="picture 13"
-                  class="gallery-picture"
+                  class='gallery-picture align-bottom slide-in'
                 />
                 <img
                   loading="lazy"
                   src="./assets/img/galery/galery14.webp"
                   alt="picture 14"
-                  class="gallery-picture"
+                  class='gallery-picture align-bottom slide-in'
                 />
                 <img
                   loading="lazy"
                   src="./assets/img/galery/galery15.webp"
                   alt="picture 15"
-                  class="gallery-picture"
+                  class='gallery-picture align-bottom slide-in'
                 />
               </div>
             </div>
@@ -607,7 +687,7 @@
                 </li>
               </ul>
             </div>
-            <div class="contacts-map"></div>
+            <div class="contacts-map" id="contacts-map"></div>
           </div>
         </div>
       </section>

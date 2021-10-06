@@ -4,15 +4,16 @@ function shuffle() {
     () => Math.random() - 0.5
   );
   let i = 0;
-  let addInColumn = '';
+  let addInColumn = "";
   for (let column of galleryColumns) {
     while (i < 15) {
-      addInColumn += `<img class="gallery-picture" src="assets/img/galery/galery${images[i]}.webp" alt="picture ${images[i]}">`;
+      addInColumn += `<img class="gallery-picture align-bottom slide-in" src="assets/img/galery/galery${images[i]}.webp" alt="picture ${images[i]}">`;
       i++;
-      if (i == 4 || i == 9) break;
+      if (!(i % 5)) break;
     }
-    column.innerHTML = addInColumn
-    addInColumn = '';
+    column.innerHTML = addInColumn;
+    addInColumn = "";
   }
 }
 shuffle();
+

@@ -77,7 +77,7 @@
   background-color: var(--white);
 }
 
-.active {
+.pagination-item.active {
   background-color: #d2b183;
 }
 

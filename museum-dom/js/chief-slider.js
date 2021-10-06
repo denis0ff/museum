@@ -297,7 +297,8 @@ ChiefSlider.prototype._setActiveClass = function() {
   for (var i = 0, length = $itemList.length; i < length; i++) {
     var $item = $itemList[i];
     var index = +$item.dataset.index;
-    if (activeItems.indexOf(index) > -1) {
+    // > -1 change to === 0
+    if (activeItems.indexOf(index) === 0) {
       $item.classList.add(CLASS_ITEM_ACTIVE);
     } else {
       $item.classList.remove(CLASS_ITEM_ACTIVE);
