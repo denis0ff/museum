@@ -132,7 +132,7 @@
   }
   .video-container {
     height: 385px;
-    background-position: 50% 160%;
+    /* background-position: 50% 160%; */
   }
   .video-controls {
     height: 51px;
@@ -148,7 +148,7 @@
     height: 3px;
   }
 
-  .big-play-video {
+  .big-play-toggle {
     top: 33%;
     left: calc(44% + 4px);
     width: 80px;
@@ -156,7 +156,7 @@
     background-size: 100%;
   }
 
-  .sound-video {
+  .sound-toggle {
     margin-left: -11px;
     margin-right: -3px;
   }
@@ -165,7 +165,7 @@
     max-width: calc(100% - 40px);
   }
 
-  .fullscreen-video {
+  .fullscreen-toggle {
     margin-left: -5px;
   }
 

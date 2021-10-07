@@ -1,4 +1,4 @@
-function debounce(func, wait = 100, immediate = true) {
+function debounce(func, wait = 20, immediate = true) {
   let timeout;
   return function () {
     var context = this, agrs = arguments;

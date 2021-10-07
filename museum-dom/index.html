@@ -22,7 +22,6 @@
       rel="stylesheet"
     />
     <script defer src="js/chief-slider.js"></script>
-    <script defer src="js/video-progress.js"></script>
     <script defer src="js/gallery-shuffle.js"></script>
     <script defer src="js/gallery-slide.js"></script>
     <script defer src="js/modal.js"></script>
@@ -30,6 +29,7 @@
     <script defer src="js/burger-menu.js"></script>
     <script defer src="js/self-check.js"></script>
     <script defer src="js/before-after-slider.js"></script>
+    <script defer src="js/video-player.js"></script>
 
     <script
       defer
@@ -350,30 +350,41 @@
             </p>
           </div>
           <div class="video-container">
-            <button class="big-play-video"></button>
+            <video src="./assets/video/video0.mp4" class="player__video viewer" poster="./assets/video/poster0.webp"></video>
+            <button class="big-play-toggle"></button>
             <div class="video-controls">
-              <button class="play-video"></button>
+              <div class="control-bar__wr">
+                <div class="control-point control__play">
+                  <button class="play-toggle"></button>
+                </div>
+                <div class="control-point control__progress">
+                  <input
+                  type="range"
+                  value="53"
+                  min="0"
+                  max="100"
+                  step="1"
+                  name="currentTime"
+                  class="video-progress"
+                />
+                </div>
+                <div class="control-point control__volume">
+                  <button class="sound-toggle"></button>
               <input
                 type="range"
-                value="53"
+                value="0.43"
                 min="0"
-                max="100"
-                step="0.5"
-                class="video-progress"
-              />
-              <button class="sound-video"></button>
-              <input
-                type="range"
-                value="43"
-                min="0"
-                max="100"
-                step="0.5"
+                max="1"
+                step="0.05"
+                name="volume"
                 class="sound-progress"
               />
-              <button class="fullscreen-video"></button>
+                </div>
+                <div class="control-point control__fullscreen">
+                  <button class="fullscreen-toggle"></button>
+                </div>
+              </div>
             </div>
-          </div>
-
           <div class="slider video-slider" id="video-slider">
             <div class="slider__container">
               <div class="slider__wrapper">

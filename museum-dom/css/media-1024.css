@@ -135,7 +135,7 @@
   }
   .video-container {
     height: 505px;
-    background-position: 50% 110%;
+    /* background-position: 50% 110%; */
   }
 
   .video-controls {
@@ -157,15 +157,15 @@
     width: calc(100% - 40px);
   }
 
-  .play-video,
-  .sound-video,
-  .fullscreen-video,
-  .big-play-video {
+  .play-toggle,
+  .sound-toggle,
+  .fullscreen-toggle,
+  .big-play-toggle {
     padding: 15px;
   }
 
-  .sound-video,
-  .fullscreen-video {
+  .sound-toggle,
+  .fullscreen-toggle {
     padding: 13px;
     background-size: 25px;
     background-position: center;
@@ -176,7 +176,7 @@
     height: 12px;
   }
 
-  .big-play-video {
+  .big-play-toggle {
     top: calc(50% - 104px);
     left: calc(50% - 75px);
     width: 16%;
