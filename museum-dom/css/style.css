@@ -355,6 +355,7 @@ button:focus {
 .sound-toggle,
 .fullscreen-toggle,
 .big-play-toggle {
+  padding: 15px;
   background-repeat: no-repeat;
   background-color: var(--black);
   border: none;
@@ -789,7 +790,7 @@ iframe {
   left: 0;
   z-index: 5;
   width: 100%;
-  height: 11.7%;
+  height: 86px;
   background: var(--black);
   transform: translateY(0);
   opacity: 1;

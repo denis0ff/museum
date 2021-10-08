@@ -24,7 +24,8 @@
     <script defer src="js/chief-slider.js"></script>
     <script defer src="js/gallery-shuffle.js"></script>
     <script defer src="js/gallery-slide.js"></script>
-    <script defer src="js/modal.js"></script>
+    <script defer src="js/modal-open.js"></script>
+    <script defer src="js/modal-calc.js"></script>
     <script defer src="js/ripple.js"></script>
     <script defer src="js/burger-menu.js"></script>
     <script defer src="js/self-check.js"></script>
@@ -363,8 +364,9 @@
                   value="53"
                   min="0"
                   max="100"
-                  step="1"
+                  step="0.05"
                   name="currentTime"
+                  
                   class="video-progress"
                 />
                 </div>
@@ -452,7 +454,6 @@
                 </div>
               </div>
             </div>
-            <!-- Кнопки для перехода к предыдущему и следующему слайду -->
             <div class="player-pagination">
               <button
                 class="player-left slider__control"
@@ -612,6 +613,7 @@
                   –
                 </button>
                 <input
+                  data-amount-basic='2'
                   class="tickets-amount-number"
                   type="number"
                   min="0"
@@ -637,6 +639,7 @@
                   –
                 </button>
                 <input
+                  data-amount-senior='2'
                   class="tickets-amount-number"
                   type="number"
                   min="0"

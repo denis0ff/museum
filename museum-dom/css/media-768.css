@@ -138,10 +138,6 @@
     height: 51px;
   }
 
-  .video-controls > * {
-    margin: 0 30px;
-  }
-
   .video-progress {
     position: absolute;
     margin: 0px 0 61px;
@@ -149,24 +145,7 @@
   }
 
   .big-play-toggle {
-    top: 33%;
-    left: calc(44% + 4px);
-    width: 80px;
-    height: 80px;
     background-size: 100%;
-  }
-
-  .sound-toggle {
-    margin-left: -11px;
-    margin-right: -3px;
-  }
-
-  .sound-progress {
-    max-width: calc(100% - 40px);
-  }
-
-  .fullscreen-toggle {
-    margin-left: -5px;
   }
 
   .player-video iframe {

@@ -7,17 +7,11 @@ const playToggle = player.querySelector(".play-toggle");
 const soundToggle = player.querySelector(".sound-toggle");
 const soundProgress = player.querySelector(".sound-progress");
 const videoProgress = player.querySelector(".video-progress");
-const fullScreenToggle = player.querySelector('.fullscreen-toggle')
+const fullScreenToggle = player.querySelector(".fullscreen-toggle");
 
 // Functions
 function togglePlay() {
-  // const method = video.paused ? 'play' : 'pause';
-  // video[method]();
-  if (video.paused) {
-    video.play();
-  } else {
-    video.pause();
-  }
+  video.paused ? video.play() : video.pause();
 }
 
 function toggleSound() {
@@ -64,8 +58,13 @@ function handleVideoProgressUpdate() {
   video[this.name] = (this.value * video.duration) / 100;
 }
 
+function autoVideoProgressUpdate() {
+  videoProgress.value = (video.currentTime / video.duration) * 100;
+  videoProgressLineUpdate();
+}
+
 function videoProgressLineUpdate() {
-  this.style.background = `linear-gradient(to right, var(--dark-red) 0%, var(--dark-red) ${this.value}%, #C4C4C4 ${this.value}%, #C4C4C4 100%)`;
+  videoProgress.style.background = `linear-gradient(to right, var(--dark-red) 0%, var(--dark-red) ${videoProgress.value}%, #C4C4C4 ${videoProgress.value}%, #C4C4C4 100%)`;
 }
 function soundProgressLineUpdate() {
   const value = soundProgress.value * 100;
@@ -73,15 +72,44 @@ function soundProgressLineUpdate() {
 }
 
 function fullScreenChange() {
-  console.log(player.fullScreenElement);
-  !player.fullScreenElement ? document.fullScreenCancel() : player.requestFullscreen() ;
+  if (!document.fullscreenElement) player.requestFullscreen();
+  else if (document.fullscreenEnabled) document.exitFullscreen();
 }
 
+function keyboardShortcuts(e) {
+  e.preventDefault();
+  const code = e.code;
+  const key = e.key
+  switch (code) {
+    case "KeyF":
+      fullScreenChange();
+      break;
+    case "KeyM":
+      toggleSound();
+      break;
+    case "Space":
+      togglePlay();
+      break;
+  }
+  if (key === 'Shift') {
+    document.addEventListener('keydown', keyboardShiftPlusShortcuts)
+  }
+}
+
+function keyboardShiftPlusShortcuts(e) {
+  const code = e.code;
+  if (code === 'Comma') {
+    video.playbackRate < 16 ? video.playbackRate += 0.25 : video.playbackRate
+  } else if (code === 'Period') {
+    video.playbackRate > 0.25 ? video.playbackRate -= 0.25 : video.playbackRate
+  }
+}
 // Hook up events
 
 video.addEventListener("click", togglePlay);
 video.addEventListener("play", updatePlayButtons);
 video.addEventListener("pause", updatePlayButtons);
+video.addEventListener("timeupdate", autoVideoProgressUpdate);
 
 soundToggle.addEventListener("click", updateSoundButton);
 soundToggle.addEventListener("click", toggleSound);
@@ -94,4 +122,6 @@ videoProgress.addEventListener("input", videoProgressLineUpdate);
 videoProgress.addEventListener("change", handleVideoProgressUpdate);
 videoProgress.addEventListener("mousemove", handleVideoProgressUpdate);
 
-fullScreenToggle.addEventListener('click', fullScreenChange)
+fullScreenToggle.addEventListener("click", fullScreenChange);
+
+document.addEventListener("keydown", keyboardShortcuts);

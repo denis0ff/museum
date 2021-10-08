@@ -114,35 +114,15 @@
   .video-container {
     height: 225px;
   }
-  .video-controls {
-    gap: 0;
-    height: 52px;
-  }
-  .video-controls > * {
-    margin: 0px 21px;
-  }
-
-  .big-play-toggle {
-    top: 27%;
-    left: calc(44% - 2px);
-    background-size: 100%;
-    width: 50px;
-    height: 50px;
-  }
 
   .play-toggle {
     background-size: 45%;
-    background-position: left;
   }
   .sound-toggle {
-    margin: 0 -8px;
     background-size: 47%;
-    background-position: left;
   }
   .fullscreen-toggle {
-    margin: 0 5px;
     background-size: 57%;
-    background-position: left;
   }
   .video-progress {
     margin: 0px 0 55px;
