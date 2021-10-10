@@ -8,6 +8,7 @@ const soundToggle = player.querySelector(".sound-toggle");
 const soundProgress = player.querySelector(".sound-progress");
 const videoProgress = player.querySelector(".video-progress");
 const fullScreenToggle = player.querySelector(".fullscreen-toggle");
+const rate = player.querySelector(".playbackRate");
 
 // Functions
 function togglePlay() {
@@ -76,34 +77,73 @@ function fullScreenChange() {
   else if (document.fullscreenEnabled) document.exitFullscreen();
 }
 
+function preventStandardHotKeyActions(event) {
+  event.stopPropagation();
+  event.preventDefault();
+}
+
 function keyboardShortcuts(e) {
+  e.stopPropagation();
   e.preventDefault();
   const code = e.code;
-  const key = e.key
+  const key = e.key;
+  let action;
   switch (code) {
     case "KeyF":
-      fullScreenChange();
+      action = fullScreenChange();
       break;
     case "KeyM":
-      toggleSound();
+      action = toggleSound();
       break;
     case "Space":
-      togglePlay();
+      action = togglePlay();
       break;
   }
-  if (key === 'Shift') {
-    document.addEventListener('keydown', keyboardShiftPlusShortcuts)
+  if (
+    action &&
+    pressedKey !== "Control" &&
+    pressedKey !== "Alt" &&
+    pressedKey !== "Shift"
+  ) {
+    action();
+    preventStandardHotKeyActions(e); //Stops the default key behaviour like jumping the page with space.
+  }
+  if (key === "Shift") {
+    document.addEventListener("keydown", keyboardShiftPlusShortcuts);
   }
 }
 
+var to;
 function keyboardShiftPlusShortcuts(e) {
   const code = e.code;
-  if (code === 'Comma') {
-    video.playbackRate < 16 ? video.playbackRate += 0.25 : video.playbackRate
-  } else if (code === 'Period') {
-    video.playbackRate > 0.25 ? video.playbackRate -= 0.25 : video.playbackRate
+  if (code === "Comma") {
+    video.playbackRate < 16 ? (video.playbackRate += 0.25) : video.playbackRate;
+  } else if (code === "Period") {
+    video.playbackRate > 0.25
+      ? (video.playbackRate -= 0.25)
+      : video.playbackRate;
+  }
+  rate.innerHTML = "x" + video.playbackRate;
+  rate.style.display = "flex";
+  if (to) {
+    clearTimeout(to)
+  }
+  to = setTimeout(() => (rate.style.display = "none"), 2000);
+}
+
+
+function playerFocused() {
+  if (player.contains(document.activeElement)) {
+    document.addEventListener("keydown", keyboardShortcuts);
+  } else {
+    document.removeEventListener("keydown", keyboardShortcuts);
   }
 }
+
+function enableShortcuts() {
+  document.addEventListener("focus", playerFocused, true);
+}
+
 // Hook up events
 
 video.addEventListener("click", togglePlay);
@@ -124,4 +164,5 @@ videoProgress.addEventListener("mousemove", handleVideoProgressUpdate);
 
 fullScreenToggle.addEventListener("click", fullScreenChange);
 
-document.addEventListener("keydown", keyboardShortcuts);
+// document.addEventListener("keydown", keyboardShortcuts);
+enableShortcuts();

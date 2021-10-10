@@ -318,8 +318,8 @@ button:focus {
   background: linear-gradient(
     to right,
     var(--dark-red) 0%,
-    var(--dark-red) 53%,
-    #c4c4c4 53%,
+    var(--dark-red) 0%,
+    #c4c4c4 0%,
     #c4c4c4 100%
   );
   border: none;
@@ -358,6 +358,7 @@ button:focus {
   padding: 15px;
   background-repeat: no-repeat;
   background-color: var(--black);
+  background-position: 0 50%;
   border: none;
   cursor: pointer;
   transition: 0.2s ease;
@@ -370,7 +371,7 @@ button:focus {
 }
 
 .sound-toggle {
-  padding-right: 65px;
+  padding-right: 21%;
   width: 45px;
   height: 31px;
   background-image: url(../assets/svg/video/volume.svg);
@@ -498,17 +499,6 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 50%;
 }
 
-/* When the radio button is hover
-  .ticket-type-container:hover input ~ .checkmark {
-    border-color: var(--font-gold);
-  } */
-
-/* When the radio button is checked
-  .ticket-type-container input:checked ~ .checkmark {
-  
-  }
-  */
-
 .checkmark:after {
   content: "";
   position: absolute;
@@ -566,7 +556,7 @@ h4.ticket-amount {
 }
 
 h4.ticket-total {
-  margin: 50px 0 60px 58%;
+  margin: 50px 0 60px 50%;
   text-align: left;
   letter-spacing: 1.65px;
 }
@@ -764,7 +754,7 @@ h4.contacts {
 
 .slide-in {
   opacity: 0;
-  transition: all, 2s;
+  transition: all, 1s;
 }
 .align-bottom.slide-in {
   transform: translateY(100%) scale(0.1);
@@ -831,4 +821,17 @@ iframe {
 
 .control__fullscreen {
   width: 2.5%;
+}
+
+.playbackRate {
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  display: none;
+  width: 60px;
+  height: 30px;
+  background-color: #eeeeee82;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
 }

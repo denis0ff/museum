@@ -67,6 +67,10 @@
   flex-direction: column;
 }
 
+.left-column fieldset {
+  border: 1px solid var(--bg-dark);
+}
+
 .booking-title {
   font-size: 50px;
   line-height: 46px;
@@ -102,8 +106,8 @@
 }
 
 .date-time {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: grid;    
+  grid-template-columns: repeat(2, 47.5%);
   column-gap: 20px;
 }
 
@@ -134,11 +138,17 @@
   z-index: -9999;
 }
 
-.booking-form .date::-webkit-datetime-edit,
-.time::-webkit-datetime-edit {
-  visibility: hidden;
+/*.booking-form .date:required:invalid::-webkit-datetime-edit,
+.booking-form .time:required:invalid::-webkit-datetime-edit {
+  color: transparent;
 }
-.booking-form .date::before {
+
+.booking-form .date:focus::-webkit-datetime-edit,
+.booking-form .time:focus::-webkit-datetime-edit {
+  color: black !important;
+}
+
+ .booking-form .date::before {
   content: "Date";
   font-family: Roboto;
   font-size: 18px;
@@ -149,7 +159,7 @@
   font-family: Roboto;
   font-size: 18px;
   color: #000;
-}
+} */
 
 .booking-form .date {
   background: url(../assets/svg/booking/date.svg) no-repeat scroll 15px 16px;
@@ -319,28 +329,23 @@ h5.right.booking-subtitle {
   background-repeat: no-repeat;
 }
 
-.ticket-result > span:first-child::before {
-  content: "2";
+.result__wr {
+  display: flex;
+  align-items: center;
+}
+
+.ticket-result .basic-result,
+.ticket-result .senior-result {
   margin-right: 10px;
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
+  display: block;
+  height: 22px;
   width: 32px;
-  line-height: 21px;
-  font-weight: normal;
+  text-align: center;
   font-size: 18px;
   line-height: 21px;
   color: #a4a4a3;
   background-color: #030303;
   border-radius: 15%;
-}
-
-.ticket-result,
-.total-result {
-  display: flex;
-  margin-bottom: 5px;
-  width: 100%;
-  justify-content: space-between;
 }
 
 .ticket-result span {
@@ -349,8 +354,12 @@ h5.right.booking-subtitle {
   letter-spacing: 1px;
 }
 
-.summary-wrapper {
-  width: 38px;
+.ticket-result,
+.total-result {
+  display: flex;
+  margin-bottom: 5px;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .total-result {
@@ -375,14 +384,12 @@ h5.right.booking-subtitle {
 }
 
 .total-result span {
+  display: flex;
   font-weight: normal;
   font-size: 32px;
   line-height: 37px;
   letter-spacing: 1px;
   color: #030303;
-}
-.total-result .summary-wrapper {
-  width: 60px;
 }
 
 .card {
@@ -575,3 +582,54 @@ span.form-logo {
   background-color: #710707;
 }
 
+.summary-wrapper {
+  margin-right: 15px;
+}
+
+.valid__wr {
+  display: flex;
+  flex-direction: column;
+}
+
+input:invalid {
+  border-color: #710707;
+}
+
+input:invalid+span.validity:after {
+  position: absolute;
+  content: '';
+  padding: 0 10px;
+  margin: 2px 10px;
+  max-width: 358px;
+  border: 1px solid #710707;
+  background: tomato;
+  overflow-wrap: break-word;
+  z-index: 10;
+}
+
+input:invalid+span.validity-date:after {
+  max-width: 147px;
+  content: 'You can`t choose a past date';
+}
+
+input:invalid+span.validity-time:after {
+  max-width: 147px;
+  content: 'You can choose from 9:00 till 18:00 with 30 minute interval';
+}
+
+input:invalid+span.validity-name:after {
+  content: 'Name can include english and cyrillic letter or space. The length of name should be between 3 and 15';
+}
+
+input:invalid+span.validity-email:after {
+  content: 'The format of address should be like: username@example.com';
+}
+
+input:invalid+span.validity-tel:after {
+  content: 'Use only digits, You can split number by 2 or 3 digits (use "-" or " "). The length of number should be less then 10 digits.';
+}
+
+/* input:valid {
+  border-width: 2px;
+  border-color: lightgreen;
+} */

@@ -17,7 +17,7 @@ const sliderImages = document.querySelectorAll('.slide-in');
   
 function slideImages(e) {
   // What part of the content is visible in the window?
-  const windowTop = window.scrollY + window.innerHeight;
+  const windowTop = window.scrollY + 2 * window.innerHeight;
   const windowCenter = window.scrollY + 1.5 * window.innerHeight;
 
   sliderImages.forEach(function(image) {
