@@ -95,6 +95,8 @@ function updateTime(event) {
     mins = 0;
     hours = (hours + 1) % 24;
   }
+  if (hours < 9) hours = 9
+  else hours = 18
   let rounded = [
     hours.toString().padStart(2, "0"),
     mins.toString().padStart(2, "0"),
@@ -180,8 +182,8 @@ function saveStorageData(total) {
 }
 
 function loadStorageData() {
-  amountOfBasic[0].value = localStorage.basicAmount;
-  amountOfSenior[0].value = localStorage.seniorAmount;
+  amountOfBasic.forEach( amount => amount.value = localStorage.basicAmount);
+  amountOfSenior.forEach( amount => amount.value = localStorage.seniorAmount);
   ticketCost = localStorage.ticketCost;
   flag--;
 }

@@ -618,7 +618,7 @@ input:invalid+span.validity-time:after {
 }
 
 input:invalid+span.validity-name:after {
-  content: 'Name can include english and cyrillic letter or space. The length of name should be between 3 and 15';
+  content: 'Name can include english and cyrillic letter or space. The length of name should be between 3 and 15 letters';
 }
 
 input:invalid+span.validity-email:after {
