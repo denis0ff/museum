@@ -22,6 +22,8 @@ const seniorSummary = document.querySelector(".senior-summary");
 
 const totalSummary = document.querySelectorAll(".total-summary");
 
+let ticketCost;
+let flag = 1;
 // Functions
 
 function plusTicketAmount() {
@@ -52,7 +54,6 @@ function minusTicketAmount() {
   updateSummary();
 }
 
-let ticketCost = 20;
 function updateRadio() {
   for (let radio of ticketTypeRadio) {
     if (radio.type == "radio" && radio.checked) {
@@ -107,6 +108,8 @@ function updateMinimalDate() {
   dateInput.min = `${date.getFullYear()}-${
     date.getMonth() + 1
   }-${date.getDate()}`;
+  updateRadio();
+  updateSelect();
 }
 
 function updateDate() {
@@ -154,12 +157,11 @@ function getTicketType(ticketType) {
 }
 
 function updateSummary() {
-  totalSummary.forEach(
-    (total) =>
-      (total.innerHTML =
-        amountOfBasic[0].value * ticketCost +
-        amountOfSenior[0].value * (ticketCost / 2))
-  );
+  if (flag) loadStorageData();
+  const totalSum =
+    amountOfBasic[0].value * ticketCost +
+    amountOfSenior[0].value * (ticketCost / 2);
+  totalSummary.forEach((total) => (total.innerHTML = totalSum));
 
   resultDate.innerHTML = dateInput.TextContent;
   resultTime.innerHTML = timeInput.value;
@@ -168,6 +170,20 @@ function updateSummary() {
   totalAmountOfSenior.innerHTML = amountOfSenior[0].value;
   basicSummary.innerHTML = amountOfBasic[0].value * ticketCost;
   seniorSummary.innerHTML = amountOfSenior[0].value * (ticketCost / 2);
+  saveStorageData();
+}
+
+function saveStorageData(total) {
+  localStorage.setItem("basicAmount", amountOfBasic[0].value);
+  localStorage.setItem("seniorAmount", amountOfSenior[0].value);
+  localStorage.setItem("ticketCost", ticketCost);
+}
+
+function loadStorageData() {
+  amountOfBasic[0].value = localStorage.basicAmount;
+  amountOfSenior[0].value = localStorage.seniorAmount;
+  ticketCost = localStorage.ticketCost;
+  flag--;
 }
 
 // Hook up events
@@ -193,5 +209,3 @@ timeInput.addEventListener("change", updateTime);
 dateInput.addEventListener("change", updateDate);
 document.addEventListener("DOMContentLoaded", updateMinimalDate);
 document.addEventListener("DOMContentLoaded", updateDate);
-
-

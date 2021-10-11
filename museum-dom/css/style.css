@@ -173,6 +173,10 @@ button:focus {
   height: 810px;
 }
 
+.title {
+  position: absolute;
+}
+
 #welcome h2 {
   position: relative;
   z-index: 10;
@@ -455,10 +459,8 @@ input[type="number"]::-webkit-outer-spin-button {
   justify-items: stretch;
 }
 
-.tickets-image {
-  height: 545px;
-  background: url(../assets/img/tickets/tickets0.webp) no-repeat;
-  background-size: 100%;
+div.tickets-image {
+  position: relative;
 }
 
 .tickets1 {
@@ -770,10 +772,6 @@ h4.contacts {
   object-fit: cover;
 }
 
-iframe {
-  display: none;
-}
-
 .video-controls {
   position: absolute;
   bottom: -1px;
@@ -834,4 +832,37 @@ iframe {
   align-items: center;
   justify-content: center;
   border-radius: 15px;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 15%;
+  right: 5%;
+  z-index: 9999;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  border-radius: 15px;
+  display: none;
+  background: url(..//assets/svg/back-to-up.svg) no-repeat;
+  background-color: rgb(35 35 35 / 82%);
+  background-position: center;
+}
+
+.back-to-top:hover {
+  background-color: var(--font-gold);
+}
+
+.back-to-top-show {
+  display: block;
+}
+
+.tickets-slider__wr {
+  height: 545px;
+}
+
+.ticket-slider__items.slider__items {
+  transition: transform 15s ease;
 }

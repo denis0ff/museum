@@ -32,9 +32,9 @@ function toggleSound() {
 }
 
 function updatePlayButtons() {
-  const icon = this.paused ? "play.svg" : "pause.svg";
+  const icon = video.paused ? "play.svg" : "pause.svg";
   playToggle.style.backgroundImage = `url(./assets/svg/video/${icon})`;
-  this.paused
+  video.paused
     ? (bigPlayToggle.style.display = `block`)
     : (bigPlayToggle.style.display = "none");
 }
@@ -60,6 +60,7 @@ function handleVideoProgressUpdate() {
 }
 
 function autoVideoProgressUpdate() {
+  if(isNaN(video.duration)) return
   videoProgress.value = (video.currentTime / video.duration) * 100;
   videoProgressLineUpdate();
 }
@@ -163,6 +164,4 @@ videoProgress.addEventListener("change", handleVideoProgressUpdate);
 videoProgress.addEventListener("mousemove", handleVideoProgressUpdate);
 
 fullScreenToggle.addEventListener("click", fullScreenChange);
-
-// document.addEventListener("keydown", keyboardShortcuts);
-enableShortcuts();
+document.addEventListener("DOMContentLoaded", enableShortcuts);

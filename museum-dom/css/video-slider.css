@@ -6,6 +6,7 @@
 #video-slider .video-slider-item {
   flex: 0 0 33.33333333333%;
   max-width: 33.33333333333%;
+  text-align: center;
 }
 
 .player-pagination {

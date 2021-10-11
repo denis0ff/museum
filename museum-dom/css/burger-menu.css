@@ -94,9 +94,6 @@
   }
 
   .title {
-    position: absolute;
-    top: 0;
-    left: 0;
     -webkit-transition: 2s;
     -moz-transition: 2s;
     -o-transition: 2s;
